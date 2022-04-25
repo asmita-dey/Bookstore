@@ -20,7 +20,7 @@
      </div>
  </nav>
     <?php
-      if(isset($title) && $title == "Admin") {
+      if(isset($title) && ($title == "Admin"|| $title == "Index"){
     ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
