@@ -19,8 +19,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img src="https://static.thenounproject.com/png/137857-200.png" 
-          height = 38px width = 60px></a>
+          <a class="navbar-brand" href="index.php"><img src="https://cdn0.iconfinder.com/data/icons/huge-basic-icons-part-3/512/E-books.png" 
+          height = 35px width = 60px></a>
           <a class="navbar-brand" href="index.php">TechHub</a>
         </div>
 

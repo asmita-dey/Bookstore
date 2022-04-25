@@ -13,14 +13,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="admin_page.php"><img src="https://static.thenounproject.com/png/137857-200.png" 
-          height = 38px width = 60px></a>
+          <a class="navbar-brand" href="admin_page.php"><img src="https://cdn0.iconfinder.com/data/icons/huge-basic-icons-part-3/512/E-books.png" 
+          height = 35px width = 60px></a>
           <a class="navbar-brand" href="admin_page.php">TechHub</a>
         </div>
      </div>
  </nav>
     <?php
-      if(isset($title) && ($title == "Admin"|| $title == "Index"){
+      if(isset($title) && ($title == "Admin"|| $title == "Index")){
     ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">

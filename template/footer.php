@@ -1,7 +1,7 @@
 	 <hr>
       	<footer>
         	<div class="text-muted pull-right">
-          		<a href="admin.php">User Login</a>
+          		<a href="user.php">User Login</a>
         	</div>
       	</footer>
     </div> <!-- /container -->
