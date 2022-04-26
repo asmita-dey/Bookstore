@@ -23,3 +23,16 @@
     padding-left: 10px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.background1{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:darkslategray;
+    position: relative;
+    padding: 0 8%;
+}
+
+
