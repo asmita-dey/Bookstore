@@ -12,19 +12,6 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `sourcecodester_bookstoredb`
---
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `admin`
 --
 
@@ -38,7 +25,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`name`, `pass`) VALUES
-('admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');
+('admin', 'admin123');
 
 -- --------------------------------------------------------
 

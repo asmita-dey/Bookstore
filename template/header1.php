@@ -13,7 +13,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="admin_page.php"><img src="https://cdn0.iconfinder.com/data/icons/huge-basic-icons-part-3/512/E-books.png" 
+          <a class="navbar-brand" href="admin_page.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
           <a class="navbar-brand" href="admin_page.php">TechHub</a>
         </div>
@@ -30,6 +30,5 @@
       </div>
     </div>
     <?php } ?>
-    
     <div class = "background1">
     <div class="container" id="main">

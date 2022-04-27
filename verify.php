@@ -2,13 +2,14 @@
 	$email = $_POST['inputEmail'];
 	$pswd = $_POST['inputPasswd'];
 
-	$conn = mysqli_connect("localhost", "root", "", "www_project");
+	require_once "./functions/database_functions.php";
+	$conn = db_connect();
 	if(!$conn){
 		echo "Cannot connecto to database " . mysqli_connect_error($conn);
 		exit;
 	}
 
-	$query = "SELECT username, password FROM admin";
+	$query = "SELECT name, pass FROM admin";
 	$result = mysqli_query($conn, $query);
 	if(!$result){
 		echo "Empty!";
@@ -16,8 +17,8 @@
 	}
 
 	while ($row = mysqli_fetch_assoc($result)){
-		if($email == $row['username'] && $pswd == $row['password']){
-			echo "Welcome admin! Long time no see";
+		if($email != $row['name'] && $pswd != $row['pass']){
+			echo "Wrong username or password!!";
 			break;
 		}
 	}

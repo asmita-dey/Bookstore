@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img src="https://cdn0.iconfinder.com/data/icons/huge-basic-icons-part-3/512/E-books.png" 
+          <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
           <a class="navbar-brand" href="index.php">TechHub</a>
         </div>

@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_SESSION['admin']) && $_SESSION['admin'] != true){
+	if(($_SESSION['admin']) && $_SESSION['admin']){
 		header("Location: admin_page.php");
 	}
 ?>
