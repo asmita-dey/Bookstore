@@ -22,11 +22,12 @@
             cursor: pointer;
         } 
 .position{
-    position:absolute;
-    left: 550px;
+    position:relative;
+    left: 1150px;
     right:50px;
     height: 150px;
     width: 150px;
+    align-items: center;
 }
 @media screen and (max-width: 990px){
     .col-md-3{
