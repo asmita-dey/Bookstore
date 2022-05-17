@@ -5,9 +5,9 @@
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 ?>
-<p class="lead">Hello Admin!</p>
 <div class = "position">
-<img src = "http://www.freeiconspng.com/uploads/login-icon-png-27.png">
+<p class="lead">Hello Admin!</p>
+<img src = "https://tse3.mm.bing.net/th?id=OIP.3b-jaj-uVz_CaqJf7sDDjwAAAA&pid=Api&P=0&w=200&h=164">
 </div>
 <?php
   if(isset($conn)) {mysqli_close($conn);}
