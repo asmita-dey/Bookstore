@@ -1,5 +1,8 @@
 <?php
-@include 'user_config.php';
+	$title = "Register";
+	require_once "./template/header2.php";
+?>
+<!--@include 'user_config.php';
 
 if(isset($_POST['submit'])){
     $name=mysqli_real_escape_string($conn,$_POST['name']);
@@ -27,125 +30,60 @@ if(isset($_POST['submit'])){
     }
     
 }
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <title>Registration</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background: rgba(150, 148, 148, 0.76) ;
-        }
-        .row{
-            background: white;
-            border-radius: 30px;
-            box-shadow: 12px 12px 22px rgb(59, 62, 62);
-            
-        }
-        img{
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-        .btn1{
-            border: none;
-            outline: none;
-            height: 50px;
-            width: 100%;
-            background-color: black;
-            color: white;
-            border-radius: 4px;
-            font-weight: bold;
-
-        }
-        .btn1:hover{
-            background: white;
-            border: 1px solid;
-            color: black;
-        }
-        .error-msg{
-            margin:10px 0;
-            display: block;
-            background: crimson;
-            border-radius: 5px;
-            font-size: 20px;
-        }
-    </style>
-  </head>
-  <body>
+ if(isset($error )){
+    foreach($error as $error){
+    echo'<span class="error-msg">'.$error.'</span>';
+    }
+   };-->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/jumbotron.css" rel="stylesheet">
+    <link href="./bootstrap/css/background.css" rel="stylesheet">
+    <link href="./bootstrap/css/search.css" rel="stylesheet">
+    <br>
     <section class="Form my-4 mx-5" >
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-5">
-                    <img src="C:\xampp\htdocs\bookstore\reg.jpg" class="img-fluid" alt="">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/young-boy-learning-on-laptop-2749773-2294229.png" class="img-responsive" alt=""
+                    height = 300px width = 500px>
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
-                    <h4><b>Register Now :</b></h4>
-
-                    <?php
-                    if(isset($error )){
-                        foreach($error as $error){
-                            echo'<span class="error-msg">'.$error.'</span>';
-                        }
-                    };
-                    ?>
-                    
+                    <br><br><h4><b>Register Now :</b></h4>
                     <form>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="text" name="name" placeholder="Enter your User name" class="form-control mt-4 my-3 p-3">
+                                <br><input type="text" name="name" placeholder="Enter your User name" class="form-control mt-4 my-3 p-3">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="email" name="email" placeholder="Enter your Email-address" class="form-control mt-4 my-3 p-3">
+                                <br><input type="email" name="email" placeholder="Enter your Email-address" class="form-control mt-4 my-3 p-3">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <input type="password" name="password" placeholder="Password" class="form-control my-3 p-3">
+                                <br><input type="password" name="password" placeholder="Password" class="form-control my-3 p-3">
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control mt-4 my-3 p-3">
+                                    <br><input type="password" name="cpassword" placeholder="Confirm Password" class="form-control mt-4 my-3 p-3">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <button type="button" class="btn1 mt-4 mb-5">Register </button>
+                                <br><br><button type="button" class="btn1 mt-4 mb-5">Register </button>
                             </div>
                         </div>
-                        
                     </form>
-
-                </div>
+                    </div>
             </div>
-
-        </div>
-    
-    
-    
-    
-    
-    </section>
+        </div>  
+</section>
+    <hr>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  
-  </body>
-</html>
+       
+                   
