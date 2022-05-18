@@ -20,7 +20,7 @@
 		exit;
 	}
 	$row = mysqli_fetch_assoc($result);
-	if($name != $row['name'] || $pswd != $row['pass']){
+	if(($name != $row['name'] || $pswd != $row['pass'])||($name == null || $pswd == null)){
 		echo "<p class=\"text-warning\">Wrong username or password!!</p>";
 		exit;
 	}
