@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-5">
-                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/young-boy-learning-on-laptop-2749773-2294229.png" class="img-responsive" alt=""
+                    <img src="http://denovati.com/wp-content/uploads/2014/08/Curriculum-Design-and-Review.png" class="img-responsive" alt=""
                     height = 300px width = 500px>
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
