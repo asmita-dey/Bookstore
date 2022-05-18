@@ -22,11 +22,12 @@
             cursor: pointer;
         } 
 .position{
-    position:relative;
-    left: 1150px;
+    position:absolute;
+    display: inline-block;
+    left: 50px;
     right:50px;
-    height: 150px;
-    width: 150px;
+    height: auto;
+    max-width: 100%;
     align-items: center;
 }
 @media screen and (max-width: 990px){
