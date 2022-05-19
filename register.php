@@ -50,30 +50,30 @@ if(isset($_POST['submit'])){
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
                     <br><br><h4><b>Register Now :</b></h4>
-                    <form>
+                    <form action = "registration.php" method = "POST">
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <br><input type="text" name="name" placeholder="Enter your User name" class="form-control mt-4 my-3 p-3">
+                                <br><input type="text" name="name" placeholder="Enter your User name" class="form-control mt-4 my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <br><input type="email" name="email" placeholder="Enter your Email-address" class="form-control mt-4 my-3 p-3">
+                                <br><input type="email" name="email" placeholder="Enter your Email-address" class="form-control mt-4 my-3 p-3" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <br><input type="password" name="password" placeholder="Password" class="form-control my-3 p-3">
+                                <br><input type="password" name="pass" placeholder="Password" class="form-control my-3 p-3" required>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <br><input type="password" name="cpassword" placeholder="Confirm Password" class="form-control mt-4 my-3 p-3">
+                                    <br><input type="password" name="cpass" placeholder="Confirm Password" class="form-control mt-4 my-3 p-3" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <br><br><button type="button" class="btn1 mt-4 mb-5">Register </button>
+                                <br><br><input type="submit" class="btn1 mt-4 mb-5" value = "Register"/>
                             </div>
                         </div>
                     </form>
@@ -82,8 +82,5 @@ if(isset($_POST['submit'])){
         </div>  
 </section>
     <hr>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
        
                    

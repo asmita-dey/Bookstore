@@ -1,19 +1,31 @@
 <?php
   session_start();
   $count = 0;
-  // connecto database
+  $email= $_POST['email'];
+  $pass= $_POST['pass'];
+  $title = "Catalogs of Books";
+  require_once "./template/header.php";
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 
   $query = "SELECT book_isbn, book_image FROM books";
+  $select="SELECT email, password FROM users WHERE email ='$email' AND password = '$pass'";
   $result = mysqli_query($conn, $query);
+  $result1=mysqli_query($conn,$select);
   if(!$result){
     echo "Can't retrieve data " . mysqli_error($conn);
     exit;
   }
-
-  $title = "Catalogs of Books";
-  require_once "./template/header.php";
+  if(!$result1){
+    echo "Can't retrieve data " . mysqli_error($conn);
+    exit;
+  }
+  if(!mysqli_fetch_array($result1)){
+        echo '<script>alert("User not found!!Please register.");
+        window.location = "register.php";
+        </script>';
+		    exit;
+  }
 ?>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="search.css"> 
