@@ -39,10 +39,10 @@
 	// if save change button is clicked , change the qty of each bookisbn
 	if(isset($_POST['save_change'])){
 		foreach($_SESSION['cart'] as $isbn =>$qty){
-			if($_POST[$isbn] == '0'){
+			if($_POST['$isbn'] == '0'){
 				unset($_SESSION['cart']["$isbn"]);
 			} else {
-				$_SESSION['cart']["$isbn"] = $_POST["$isbn"];
+				$_SESSION['cart']["$isbn"] = $_POST['$isbn'];
 			}
 		}
 	}

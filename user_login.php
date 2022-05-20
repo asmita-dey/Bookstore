@@ -18,7 +18,7 @@
                 <div class="col-lg-7 px-5 pt-5">
                     <br><br><h4><b>Sign in to your account :</b></h4>
                     
-                    <form action = "books.php" method = "POST">
+                    <form action = "user_log.php" method = "POST">
                         <div class="form-row">
                             <div class="col-lg-7">
                                 <br><input type="email" placeholder="Enter your email-address" class="form-control mt-4 my-3 p-3" name = "email" required/>

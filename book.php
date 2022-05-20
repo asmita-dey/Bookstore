@@ -66,6 +66,3 @@
           </form>
        	</div>
       </div>
-<?php
-  require "./template/footer.php";
-?>

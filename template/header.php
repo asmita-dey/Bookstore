@@ -27,22 +27,17 @@
         <!--/.navbar-collapse -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <!-- link to publiser_list.php -->
-              <li><a href="publisher_list.php"><span class="glyphicon glyphicon-paperclip"></span>&nbsp; Publisher</a></li>
-              <!-- link to books.php -->
               <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>
-              <!-- link to contacts.php -->
-              <li><a href="contact.php"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; Contact</a></li>
-              <!-- link to shopping cart -->
               <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>
+              <li><a href="contact.php"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; Contact</a></li>
+              <li><a href="admin_signout.php"><span class="glyphicon glyphicon-off"></span>&nbsp; Signout</a></li>
             </ul>
         </div>
       </div>
     </nav>
     <?php
-      if(isset($title) && $title == "Index") {
+     if(isset($title) && ($title == "Admin"|| $title == "Index")){
     ?>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <h1><b>Welcome To TechHub</b></h1>
@@ -51,5 +46,5 @@
     </div>
     <?php } ?>
     
-    <div class = "background">
+    <div class = "background1">
     <div class="container" id="main">

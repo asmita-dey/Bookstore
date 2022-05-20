@@ -1,30 +1,20 @@
 <?php
   session_start();
+  if(!$_SESSION['email'])
+  {
+    header("Location: user_login.php");
+  }
   $count = 0;
-  $email= $_POST['email'];
-  $pass= $_POST['pass'];
   $title = "Catalogs of Books";
   require_once "./template/header.php";
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 
-  $query = "SELECT book_isbn, book_image FROM books";
-  $select="SELECT email, password FROM users WHERE email ='$email' AND password = '$pass'";
+  $query = "SELECT book_isbn, book_image, book_title, book_author, book_price FROM books";
   $result = mysqli_query($conn, $query);
-  $result1=mysqli_query($conn,$select);
   if(!$result){
     echo "Can't retrieve data " . mysqli_error($conn);
     exit;
-  }
-  if(!$result1){
-    echo "Can't retrieve data " . mysqli_error($conn);
-    exit;
-  }
-  if(!mysqli_fetch_array($result1)){
-        echo '<script>alert("User not found!!Please register.");
-        window.location = "register.php";
-        </script>';
-		    exit;
   }
 ?>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,8 +28,7 @@
    </button>   
    </form>   
    </div>
-   <br>   
-   <p class="lead text-center text-muted">Catalogs Of Books</p>     
+   <br>      
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
       <div class="row">
         <?php while($query_row = mysqli_fetch_assoc($result)){ ?>
@@ -48,16 +37,22 @@
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
             </a>
           </div>
+          <div class="col-md-3">
+          <h4><b><p><?php echo $query_row['book_title']; ?></p></b></h4>
+          <h4><i><p><?php echo $query_row['book_author']; ?></p></i></h4>
+          <h5><b><p>Price : Rs.<?php echo $query_row['book_price']; ?></p></b></h5>
+          <a href="book.php?bookisbn=<?php echo $query_row['book_isbn'];?>" class="btn btn-primary">Get Details</a>
+        </div>
         <?php
           $count++;
-          if($count >= 4){
+          if($count >= 1){
               $count = 0;
               break;
             }
           } ?> 
       </div>
+      <br>
 <?php
       }
   if(isset($conn)) { mysqli_close($conn); }
-  require_once "./template/footer.php";
 ?>
