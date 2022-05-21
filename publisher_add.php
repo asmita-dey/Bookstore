@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$title = "Add new publisher";
-	require "./template/header.php";
+	require "./template/header3.php";
 	require "./functions/database_functions.php";
 	$conn = db_connect();
 
@@ -36,11 +36,11 @@
     <form method="post" action="publisher_add.php" enctype="multipart/form-data">
 		<table class="table">
 			<tr>
-				<th>Publisher Id</th>
+				<th>Publisher Id:</th>
 				<td><input type="text" name="pubid"></td>
 			</tr>
 			<tr>
-				<th>Publisher Name</th>
+				<th>Publisher Name:</th>
 				<td><input type="text" name="pubname" required></td>
 			</tr>
         </table>
@@ -50,5 +50,4 @@
 	<br/>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
-	require_once "./template/footer.php";
 ?>

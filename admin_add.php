@@ -2,7 +2,7 @@
 	session_start();
 	require_once "./functions/admin.php";
 	$title = "Add new book";
-	require "./template/header.php";
+	require "./template/header3.php";
 	require "./functions/database_functions.php";
 	$conn = db_connect();
 
@@ -100,5 +100,4 @@
 	<br/>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
-	require_once "./template/footer.php";
 ?>

@@ -1,32 +1,23 @@
 <?php
 	session_start();
-	$name = $_POST['inputName'];
-	$pswd = $_POST['inputPasswd'];
+	if(!$_SESSION['inputName'])
+  	{
+    header("Location: admin.php");
+  	}
 	$title = "List Book";
-	require_once "./template/header.php";
+	require_once "./template/header3.php";
 	require_once "./functions/database_functions.php";
 	$conn = db_connect();
-	
-	$query = "SELECT name, pass FROM admin";
+
 	$query1 = "SELECT * FROM books";
-	$result = mysqli_query($conn, $query);
 	$result1 = mysqli_query($conn, $query1);
-	if(!$result){
-		echo "Empty!";
-		exit;
-	}
+
 	if(!$result1){
 		echo "Empty!";
 		exit;
 	}
-	$row = mysqli_fetch_assoc($result);
-	if(($name != $row['name'] || $pswd != $row['pass'])||($name == null || $pswd == null)){
-		echo "<p class=\"text-warning\">Wrong username or password!!</p>";
-		exit;
-	}
 ?>
 	<p class="lead"><a href="admin_add.php">Add new book</a></p>
-	<a href="admin_signout.php" class="btn btn-primary">Sign out!</a>
 	<table class="table" style="margin-top: 20px">
 		<tr>
 			<th>ISBN</th>
@@ -55,5 +46,4 @@
 	</table>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
-	require_once "./template/footer.php";
 ?>

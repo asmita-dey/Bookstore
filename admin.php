@@ -10,7 +10,7 @@
           class="img-responsive" alt="image">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form action = "admin_book.php" method = "POST">
+        <form action = "admin_log.php" method = "POST">
           <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
             <br><br><br><p class="lead fw-normal mb-0 me-3">Admin Login!</p>
           </div>

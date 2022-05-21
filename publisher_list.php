@@ -15,7 +15,7 @@
 	}
 
 	$title = "List Of Publishers";
-	require "./template/header.php";
+	require "./template/header3.php";
 ?>
 	<p class="lead">List of Publisher</p>
 	<ul>
@@ -36,7 +36,7 @@
 	?>
 		<li>
 			<span class="badge"><?php echo $count; ?></span>
-		    <a href="bookPerPub.php?pubid=<?php echo $row['publisherid']; ?>"><?php echo $row['publisher_name']; ?></a>
+		    <?php echo $row['publisher_name']; ?></a>
 		</li>
 	<?php } ?>
 	</ul>
@@ -45,5 +45,4 @@
 	</div>
 <?php
 	mysqli_close($conn);
-	require "./template/footer.php";
 ?>

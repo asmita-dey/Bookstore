@@ -2,7 +2,7 @@
 	session_start();
 	require_once "./functions/admin.php";
 	$title = "Edit book";
-	require_once "./template/header.php";
+	require_once "./template/header3.php";
 	require_once "./functions/database_functions.php";
 	$conn = db_connect();
 
@@ -65,5 +65,4 @@
 	<a href="admin_book.php" class="btn btn-success">Confirm</a>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
-	require "./template/footer.php"
 ?>
