@@ -10,17 +10,11 @@
   $row = select4LatestBook($conn);
 ?>
 <link href="./bootstrap/css/search.css" rel="stylesheet">
-<p class="lead text-center text-muted">Hello Readers!</p>
-<div class = "lead">
-<marquee dir ="left"><img src = "https://freepngimg.com/thumb/star/36977-7-gold-star-sticker-file.png" 
-height = 30px width = 30px><i>Flat 10% off on a purchase of Rs.499 or above!!</i><img src = "https://freepngimg.com/thumb/star/36977-7-gold-star-sticker-file.png" 
-height = 30px width = 30px></marquee><br>
-</div>
+<br><p class="lead text-center text-muted">Hello Readers!</p>
 <div class="row">
         <?php foreach($row as $book) { ?>
       	<div class="col-md-3">
            <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $book['book_image']; ?>">
-          </a>
       	</div>
         <?php } ?>
     </div>

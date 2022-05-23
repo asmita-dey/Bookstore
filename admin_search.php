@@ -1,23 +1,20 @@
 <?php
 	session_start();
-	if(!$_SESSION['inputName'])
-  	{
-    header("Location: admin.php");
-  	}
-	$title = "List Book";
+    $title = "List Book";
 	require_once "./template/header3.php";
 	require_once "./functions/database_functions.php";
 	$conn = db_connect();
 
-	$query1 = "SELECT * FROM books";
+    $image = $_POST['search'];
+	$query1 = "SELECT * FROM books WHERE book_title LIKE '%$image%' OR book_author LIKE '%$image%'";;
 	$result1 = mysqli_query($conn, $query1);
 
 	if(!$result1){
-		echo "Empty!";
+        echo "Can't retrieve data " . mysqli_error($conn);
 		exit;
 	}
 ?>
-   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="search.css"> 
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
    <div class="search">
