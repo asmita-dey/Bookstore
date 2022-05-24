@@ -86,7 +86,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 	<script>
 		document.getElementById('rzp-button1').onclick = async function(e) {
 
-			const rawResponse = await fetch('/pay.php?amt=<?php echo $_SESSION['total_price'] ?>', {
+			const rawResponse = await fetch('http://localhost/bookstore/pay.php?amt=<?php echo $_SESSION['total_price'] ?>', {
 				method: 'GET',
 				headers: {
 					'Accept': 'application/json',
