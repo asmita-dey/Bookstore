@@ -98,5 +98,5 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 if (isset($conn)) {
 	mysqli_close($conn);
 }
-require_once "./template/footer.php";
+require_once "./template/footer3.php";
 ?>

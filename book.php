@@ -66,3 +66,7 @@
           </form>
        	</div>
       </div>
+<?php
+require_once "./template/footer3.php";
+?>
+       

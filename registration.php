@@ -5,7 +5,13 @@
   $pass= $_POST['pass'];
   $cpass= $_POST['cpass'];
   $title = "Register";
-  if($cpass!=$pass){
+
+  if(!preg_match("/^[a-zA-Z-']*$/",$name)){
+    echo '<script>alert("Invalid Name!!");
+    window.location = "register.php";
+    </script>';
+  }
+  else if($cpass!=$pass){
     echo '<script>alert("Password doesnot matched!!");
     window.location = "register.php";
     </script>';

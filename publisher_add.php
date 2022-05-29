@@ -45,9 +45,10 @@
 			</tr>
         </table>
 		<input type="submit" name="add" value="Add new publisher" class="btn btn-primary">
-		<input type="reset" value="cancel" class="btn btn-default">
+		<input type="reset" value="Reset" class="btn btn-default">
 	</form>
 	<br/>
+	<a href="publisher_list.php" class="btn btn-success">Cancel</a>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
 ?>

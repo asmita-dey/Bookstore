@@ -40,4 +40,6 @@
             </div>
         </div>  
 </section>
-    <hr>
+<?php
+require_once "./template/footer3.php";
+?>

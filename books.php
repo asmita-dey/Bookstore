@@ -41,6 +41,7 @@
           <h4><b><p><?php echo $query_row['book_title']; ?></p></b></h4>
           <h4><i><p><?php echo $query_row['book_author']; ?></p></i></h4>
           <h5><b><p style = "color: green;">Price : Rs.<?php echo $query_row['book_price']; ?></p></b></h5>
+          <h5><i><p>Free delivery within 7 days.</p></i></h5>
           <a href="book.php?bookisbn=<?php echo $query_row['book_isbn'];?>" class="btn btn-primary">Get Details</a>
         </div>
         <?php
@@ -55,4 +56,5 @@
 <?php
       }
   if(isset($conn)) { mysqli_close($conn); }
+  require_once "./template/footer3.php";
 ?>

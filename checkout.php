@@ -48,40 +48,10 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 			<p class="text-danger">All fields have to be filled</p>
 		<?php } ?>
 		<div class="form-group">
-			<label for="name" class="control-label col-md-4">Name</label>
-			<div class="col-md-4">
-				<input id="name" type="text" name="name" class="col-md-4" class="form-control">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="address" class="control-label col-md-4">Address</label>
-			<div class="col-md-4">
-				<input type="text" name="address" class="col-md-4" class="form-control">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="city" class="control-label col-md-4">City</label>
-			<div class="col-md-4">
-				<input type="text" name="city" class="col-md-4" class="form-control">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="zip_code" class="control-label col-md-4">Pin Code</label>
-			<div class="col-md-4">
-				<input type="text" name="zip_code" class="col-md-4" class="form-control">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="country" class="control-label col-md-4">Country</label>
-			<div class="col-md-4">
-				<input type="text" name="country" class="col-md-4" class="form-control">
-			</div>
-		</div>
-		<div class="form-group">
 			<button id="rzp-button1" type="button" name="submit" value="Purchase" class="btn btn-primary">Purchase</button>
 		</div>
 	</form>
-	<p class="lead">Please press Purchase to confirm your purchase!</p>
+	<a href="cart.php" class="btn btn-success">Cancel</a>
 	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 	<script>
 		document.getElementById('rzp-button1').onclick = async function(e) {
@@ -102,11 +72,8 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				"name": "TechHub",
 				"description": "Transaction",
 				"order_id": content.id,
-				"prefill": {
-					"email": document.getElementById("name").value
-				},
 				"handler": function(response) {
-					window.location.href = "/payment-success.php"
+					window.location.href = "http://localhost/bookstore/payment-success.php"
 				},
 			};
 			var rzp1 = new Razorpay(options);
@@ -125,5 +92,6 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 if (isset($conn)) {
 	mysqli_close($conn);
 }
+require_once "./template/footer3.php";
 ?>
-<hr>
+       

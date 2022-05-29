@@ -3,6 +3,12 @@
 	$name = $_POST['inputName'];
 	$pswd = $_POST['inputPasswd'];
 	$title = "Admin Login";
+    if(!preg_match("/^[a-zA-Z-']*$/",$name)){
+        echo '<script>alert("Invalid username!!");
+        window.location = "admin.php";
+        </script>';
+      }
+    else{
     require_once "./functions/database_functions.php";
 	$conn = db_connect();
 	
@@ -18,10 +24,10 @@
         exit;
      }
     if(!mysqli_fetch_array($result)){
-        echo '<script>alert("Email or Password is incorrect!!");
+        echo '<script>alert("Username or Password is incorrect!!");
         window.location = "admin.php";
         </script>';
             exit;
         }
-   
+    }
 ?>

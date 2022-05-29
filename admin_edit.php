@@ -59,7 +59,7 @@
 			</tr>
 		</table>
 		<input type="submit" name="save_change" value="Change" class="btn btn-primary">
-		<input type="reset" value="cancel" class="btn btn-default">
+		<input type="reset" value="Reset" class="btn btn-default">
 	</form>
 	<br/>
 	<a href="admin_book.php" class="btn btn-success">Confirm</a>

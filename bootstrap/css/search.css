@@ -44,7 +44,7 @@
 .row{
     background: white;
     border-radius: 30px;
-    box-shadow: 12px 12px 22px rgb(81, 155, 170);
+    box-shadow: 12px 12px 22px rgb(60, 61, 61);
     margin-left: -20px;
     margin-right: 70px;
 }
@@ -75,5 +75,4 @@ img{
     border-radius: 5px;
     font-size: 20px;
 }
-
 

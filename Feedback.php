@@ -4,7 +4,7 @@
   $email=$_POST['email'];
   $feedback=$_POST['feedback'];
 
-  if((!preg_match("/^[a-zA-Z-']*$name"))&&(!filter_var($email,FILTER_VALIDATE_EMAIL))){
+  if(((!preg_match("/^[a-zA-Z-']*$/",$name)))||(!filter_var($email,FILTER_VALIDATE_EMAIL))){
     echo '<script>alert("Invalid Name or Email!!");
     window.location = "contact.php";
     </script>';

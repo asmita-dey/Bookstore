@@ -3,6 +3,13 @@
   $email= $_POST['email'];
   $pass= $_POST['pass'];
   $title = "Login";
+
+  if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+    echo '<script>alert("Invalid Email!!");
+    window.location = "contact.php";
+    </script>';
+  }
+  else{
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 
@@ -23,4 +30,5 @@
        $_SESSION['email']=$email;
        exit;
     }
+  }
 ?>

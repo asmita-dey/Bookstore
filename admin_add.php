@@ -67,7 +67,7 @@
 		<table class="table">
 			<tr>
 				<th>ISBN</th>
-				<td><input type="text" name="isbn"></td>
+				<td><input type="text" name="isbn" required></td>
 			</tr>
 			<tr>
 				<th>Title</th>
@@ -79,7 +79,7 @@
 			</tr>
 			<tr>
 				<th>Image</th>
-				<td><input type="file" name="image"></td>
+				<td><input type="file" name="image" required></td>
 			</tr>
 			<tr>
 				<th>Description</th>
@@ -95,9 +95,10 @@
 			</tr>
 		</table>
 		<input type="submit" name="add" value="Add new book" class="btn btn-primary">
-		<input type="reset" value="cancel" class="btn btn-default">
+		<input type="reset" value="Reset" class="btn btn-default">
 	</form>
 	<br/>
+	<a href = "admin_book.php" class="btn btn-success">Cancel</a>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
 ?>

@@ -2,44 +2,14 @@
 	$title = "Register";
 	require_once "./template/header2.php";
 ?>
-<!--@include 'user_config.php';
-
-if(isset($_POST['submit'])){
-    $name=mysqli_real_escape_string($conn,$_POST['name']);
-    $email=mysqli_real_escape_string($conn,$_POST['email']);
-    $pass=md5($_POST['password']);
-    $cpass=md5($_POST['cpassword']);
-
-    $select="SELECT * FROM users WHERE email='$email' && password='$pass'";
-
-    $result=mysqli_query($conn,$select);
-
-    if(mysqli_num_rows($result)>0){
-
-        $error[]='User already exists!';
-
-    }else{
-
-        if($pass !=$cpass){
-            $error[]='Password not matched!';
-        }else{
-            $insert="INSERT INTO users(Name,Email,Password)VALUES('$name','$email','$pass');
-            mysqli_query($conn,$insert);
-            header('location:user_login.php');
-        }
-    }
-    
-}
- if(isset($error )){
-    foreach($error as $error){
-    echo'<span class="error-msg">'.$error.'</span>';
-    }
-   };-->
+<head>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="./bootstrap/css/jumbotron.css" rel="stylesheet">
     <link href="./bootstrap/css/background.css" rel="stylesheet">
     <link href="./bootstrap/css/search.css" rel="stylesheet">
+</head>
+<body>
     <br>
     <section class="Form my-4 mx-5" >
         <div class="container">
@@ -81,6 +51,9 @@ if(isset($_POST['submit'])){
             </div>
         </div>  
 </section>
-    <hr>
+</body>
+<?php
+require_once "./template/footer3.php";
+?>
        
                    

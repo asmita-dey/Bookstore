@@ -12,8 +12,8 @@ if(!$_SESSION['email'])
 		<div class="col-md-6 text-center">
 			<form class="form-horizontal" action = "Feedback.php" method="POST">
 			  	<fieldset>
-				    <legend>Contact</legend>
-				    <p class="lead">We'd love to hear from you! Complete the form to send us Feedbacks.</p>
+				    <legend>Contact Us!</legend>
+				    <p class="lead">We'd love to hear from you! Please send us your feedbacks.</p>
 				    <div class="form-group">
 				      	<label for="inputName" class="col-lg-2 control-label">Name:</label>
 				      	<div class="col-lg-10">
@@ -43,3 +43,6 @@ if(!$_SESSION['email'])
 		</div>
 		<div class="col-md-3"></div>
     </div>
+<?php
+  require_once "./template/footer3.php";
+?>
