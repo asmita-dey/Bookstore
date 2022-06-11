@@ -17,18 +17,68 @@
     exit;
   }
 ?>
-  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+ <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="search.css"> 
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       *{
+           box-sizing:border-box;
+       }
+       .column1{
+           float: left;
+           width: 50%;
+           padding:0px;
+       }
+       .column2{
+           float: left;
+           width: 45%;
+           padding:0px;
+       }
+       .column3{
+           float: left;
+           width: 5%;
+           padding:6px;
+       }
+       .row1:after{
+            content:"";
+            display:table;
+            clear:both;
+       }
+    </style>
+  </head>
+  <body>
   <br>
+  <div class = "row1">
+  <div class = "column1">
   <div class="search">
   <form action="book_search.php" method = "POST">
-   <input type="text" placeholder=" Search....."  name="search"/>
+  <input type="text" placeholder=" Search....."  name="search"/>
    <button>   
    <i class="fa fa-search"  style="font-size: 18px;"> </i>
    </button>   
    </form>   
    </div>
-   <br>      
+    </div>
+
+  <div class = "column2">
+  <form action="book_filter.php" method="POST">
+  <div class="dropdown" >
+  <select class="form-control" name="filter" placeholder="Choose Category.....">
+  <option value="Best seller">Best Seller</option>
+  <option value="Recommended">Recommended</option>
+  <option value="Limited edition">Limited Edition</option>
+  </select>
+  </div>
+  </div>
+  <div class = "column3">
+  <button>   
+   <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+   </button> 
+  </form>
+  </div>
+  </div>  
+  <br>   
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
       <div class="row">
         <?php while($query_row = mysqli_fetch_assoc($result)){ ?>

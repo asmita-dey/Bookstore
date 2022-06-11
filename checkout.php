@@ -48,6 +48,36 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 			<p class="text-danger">All fields have to be filled</p>
 		<?php } ?>
 		<div class="form-group">
+			<label for="name" class="control-label col-md-4">Name</label>
+			<div class="col-md-4">
+				<input type="text" id="name" name="name" class="col-md-4" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="address" class="control-label col-md-4">Address</label>
+			<div class="col-md-4">
+				<input type="text" id="address", name="address" class="col-md-4" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="city" class="control-label col-md-4">City</label>
+			<div class="col-md-4">
+				<input type="text" id="city", name="city" class="col-md-4" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="zip_code" class="control-label col-md-4">Pin Code</label>
+			<div class="col-md-4">
+				<input type="text" id="zip_code", name="zip_code" class="col-md-4" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="country" class="control-label col-md-4">Country</label>
+			<div class="col-md-4">
+				<input type="text" id="country", name="country" class="col-md-4" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
 			<button id="rzp-button1" type="button" name="submit" value="Purchase" class="btn btn-primary">Purchase</button>
 		</div>
 	</form>

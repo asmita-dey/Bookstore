@@ -1,4 +1,10 @@
 <?php
+ $_SESSION['ship'] = array();
+ foreach($_POST as $key => $value){
+     if($key != "submit"){
+         $_SESSION['ship'][$key] = $value;
+     }
+ }
 try {
     $apiKey = "rzp_test_TZZFBpHc7KQlbn";
     $apiSecret = "M478j0AD2csTJLDJhy9reebF";

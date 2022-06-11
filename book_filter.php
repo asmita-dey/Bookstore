@@ -5,8 +5,9 @@
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 
-  $image = $_POST['search'];
-  $query = "SELECT book_isbn, book_image,  book_title,  book_author,  book_price FROM books WHERE book_title LIKE '%$image%' OR book_author LIKE '%$image%'";
+  $image = $_POST['filter'];
+  $query = "SELECT books.book_isbn, books.book_image,  books.book_title,  books.book_author,  books.book_price, 
+  category.category FROM books  INNER JOIN category WHERE category.category = '$image' AND books.book_isbn = category.book_isbn";
   
   $result = mysqli_query($conn, $query);
   if(!$result){
@@ -14,7 +15,7 @@
     exit;
   }
 
-  $title = "Books Search";
+  $title = "Books Filter";
   require_once "./template/header.php";
 ?> 
   <head>

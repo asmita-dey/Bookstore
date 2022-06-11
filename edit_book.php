@@ -11,6 +11,7 @@
 	$descr = trim($_POST['descr']);
 	$price = floatval(trim($_POST['price']));
 	$publisher = trim($_POST['publisher']);
+	$category = trim($_POST['category']);
 
 	if(isset($_FILES['image']) && $_FILES['image']['name'] != ""){
 		$image = $_FILES['image']['name'];
@@ -44,6 +45,8 @@
 	book_descr = '$descr', 
 	book_price = '$price', 
 	book_image ='$image' WHERE book_isbn = '$isbn'";
+	$query1 = "UPDATE category SET  
+	category = '$category' WHERE book_isbn = '$isbn'";
 	} 
 	else {
 	$query = "UPDATE books SET  
@@ -51,12 +54,19 @@
 	book_author = '$author', 
 	book_descr = '$descr', 
 	book_price = '$price' WHERE book_isbn = '$isbn'";
+	$query1 = "UPDATE category SET  
+	category = '$category' WHERE book_isbn = '$isbn'";
 	}
 	
 	
 	// two cases for fie , if file submit is on => change a lot
 	$result = mysqli_query($conn, $query);
+	$result1 = mysqli_query($conn, $query1);
 	if(!$result){
+		echo "Can't update data " . mysqli_error($conn);
+		exit;
+	}
+	if(!$result1){
 		echo "Can't update data " . mysqli_error($conn);
 		exit;
 	} else {
