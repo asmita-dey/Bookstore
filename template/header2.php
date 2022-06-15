@@ -15,10 +15,20 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
-          <a class="navbar-brand" href="index.php">TechHub</a>
+          <b><a class="navbar-brand" href="index.php">TechHub</a><b>
         </div>
-     </div>
- </nav>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>
+              <li><a href="register.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Register</a></li>
+              
+          </ul>
+        </div>
+
+      </div>
+      
+    </nav>
     <?php
       if(isset($title) && ($title == "Admin"|| $title == "Index")){
     ?>

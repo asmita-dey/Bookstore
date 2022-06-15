@@ -1,7 +1,5 @@
       	<footer>
-        	<div class="text-muted pull-right">
-          		<a href="user_login.php">User Login</a>
-        	</div>
+        	
       	</footer>
     </div> <!-- /container -->
 

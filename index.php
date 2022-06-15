@@ -1,7 +1,7 @@
 <?php
   session_start();
   $count = 0;
-  // connecto database
+  // connect to database
   
   $title = "Index";
   require_once "./template/header2.php";
@@ -24,4 +24,4 @@
   require_once "./template/footer3.php";
 ?>
 
-<!-- Sayan is good -->
+
