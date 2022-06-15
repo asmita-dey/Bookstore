@@ -1,9 +1,5 @@
 <?php
   session_start();
-  if(!$_SESSION['email'])
-  {
-    header("Location: user_login.php");
-  }
   $count = 0;
   $title = "Catalogs of Books";
   require_once "./template/header.php";

@@ -10,6 +10,10 @@
 		)
 	*/
 session_start();
+if(!$_SESSION['email'])
+{
+  header("Location: user_login.php");
+}
 require_once "./functions/database_functions.php";
 // print out header here
 $title = "Checking out";
