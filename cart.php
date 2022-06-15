@@ -10,7 +10,10 @@
 		)
 	*/
 session_start();
-
+if(!$_SESSION['email'])
+  {
+    header("Location: user_login.php");
+  }
 require_once "./functions/database_functions.php";
 require_once "./functions/cart_functions.php";
 
@@ -40,9 +43,20 @@ if (isset($book_isbn)) {
 // if save change button is clicked , change the qty of each bookisbn
 if (isset($_POST['save_change'])) {
 	foreach ($_SESSION['cart'] as $isbn => $qty) {
-		if ($_POST["$isbn"] == '0' || $_POST["$isbn"] == null) {
+		if(!preg_match("/^[0-9]*$/",$_POST["$isbn"])){
+			echo '<script>alert("Quantity must have numeric value!!");
+			window.location = "cart.php";
+			</script>';
+		}
+		else if ($_POST["$isbn"] == '0' || $_POST["$isbn"] == null) {
 			unset($_SESSION['cart']["$isbn"]);
-		} else {
+		} 
+		else if($_POST["$isbn"]<0){
+			echo '<script>alert("Quantity cannot be negative!!");
+			window.location = "cart.php";
+			</script>';
+		}
+		else {
 			$_SESSION['cart']["$isbn"] = $_POST["$isbn"];
 		}
 	}

@@ -6,6 +6,11 @@
   $conn = db_connect();
 
   $image = $_POST['filter'];
+  if($image=="select"){
+    echo '<script>
+			window.location = "books.php";
+			</script>';
+  }
   $query = "SELECT books.book_isbn, books.book_image,  books.book_title,  books.book_author,  books.book_price, 
   category.category FROM books  INNER JOIN category WHERE category.category = '$image' AND books.book_isbn = category.book_isbn";
   
@@ -66,6 +71,7 @@
   <form action="book_filter.php" method="POST">
   <div class="dropdown" >
   <select class="form-control" name="filter" placeholder="Choose Category.....">
+  <option value="select">Choose Category.....</option>
   <option value="Best seller">Best Seller</option>
   <option value="Recommended">Recommended</option>
   <option value="Limited edition">Limited Edition</option>
@@ -87,8 +93,6 @@
             <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
             </a>
-          </div>
-          <div class="col-md-6">
           <h4><b><p><?php echo $query_row['book_title']; ?></p></b></h4>
           <h4><i><p><?php echo $query_row['book_author']; ?></p></i></h4>
           <h5><b><p style = "color: green;">Price : Rs.<?php echo $query_row['book_price']; ?></p></b></h5>
@@ -97,7 +101,7 @@
         </div>
         <?php
           $count++;
-          if($count >= 1){
+          if($count >= 4){
               $count = 0;
               break;
             }
