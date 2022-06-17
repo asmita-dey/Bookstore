@@ -25,6 +25,9 @@
    </button>   
    </form>   
    </div>
+   <?php if(!mysqli_num_rows($result1)){
+            echo '<br><p class = "lead text-warning">Result not Found!!!</div>';
+            exit;}?>
 	<table class="table" style="margin-top: 20px">
 		<tr>
 			<th>ISBN</th>

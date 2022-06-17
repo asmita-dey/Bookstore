@@ -8,7 +8,8 @@
     $image = $_POST['search'];
 	$query1 = "SELECT order_items.book_isbn, order_items.quantity, orders.customerid, orders.amount, orders.date,
     orders.ship_name, orders.ship_address, orders.ship_city, orders.ship_zip_code, orders.ship_country FROM order_items INNER JOIN orders ON 
-    order_items.orderid = orders.orderid WHERE orders.ship_name LIKE '%$image%' OR orders.ship_address LIKE '%$image%' OR orders.ship_city LIKE '%$image%'";
+    order_items.orderid = orders.orderid WHERE orders.ship_name LIKE '%$image%' OR orders.ship_address LIKE '%$image%' OR orders.ship_city LIKE '%$image%'
+	OR orders.customerid = '$image'";
 	$result1 = mysqli_query($conn, $query1);
 
 	if(!$result1){
@@ -27,6 +28,9 @@
    </button>   
    </form>   
    </div>
+  <?php if(!mysqli_num_rows($result1)){
+            echo '<br><p class = "lead text-warning">Result not Found!!!</div>';
+            exit;}?>
 	<table class="table" style="margin-top: 20px">
 		<tr>
 			<th>Book ISBN</th>

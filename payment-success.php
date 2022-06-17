@@ -20,7 +20,11 @@
 	require "./template/header.php";
 	// connect database
 	$conn = db_connect();
-    extract($_SESSION['ship']);
+    $name = $_GET['name'];
+	$address = $_GET['address'];
+	$city = $_GET['city'];
+	$zip_code = $_GET['zip_code'];
+	$country = $_GET['country'];
    
    if(isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))){
     $customerid = getCustomerId($name, $address, $city, $zip_code, $country);
@@ -30,6 +34,7 @@
 	}
 	$date = date("Y-m-d H:i:s");
     $_SESSION['total_price'] = total_price($_SESSION['cart']);
+	$amount=$_SESSION['total_price'];
 	insertIntoOrder($conn, $customerid, $_SESSION['total_price'], $date, $name, $address, $city, $zip_code, $country);
 
 	// take orderid from order to insert order items
@@ -51,16 +56,25 @@
 <head>
     <style>
     .pay{
-        padding-left: 430px;
+        text-align: center;
+		justify-content: center;
     }
 </style>
 </head>
 <body>
 <div class = "pay">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "https://freepngimg.com/thumb/green_tick/27894-7-green-tick-transparent-background-thumb.png">
+<p>Do not refresh this page</p> 
+<img src = "https://freepngimg.com/thumb/green_tick/27894-7-green-tick-transparent-background-thumb.png">
 <h3 style="color: green;"><b>Payment Successfull!!</b></h3>
+<p class="lead text-success">Your order has been placed sucessfully!!!!!Your Customer ID is <?php echo "$customerid"; ?></p>
+<table class="table">
+         <tr>
+			 <td>Order_ID: <?php echo "$orderid"; ?></td>
+			 <td>Book_ISBN: <?php echo "$isbn"; ?></td>
+			 <td>Amount: Rs.<?php echo "$amount"; ?></td> 	
+</table>	
 </div>
-<p class="lead text-success">Your order has been placed sucessfully!!</p>
+<p>Save this for future reference.</p>
 <?php
     if(isset($conn)){
         mysqli_close($conn);

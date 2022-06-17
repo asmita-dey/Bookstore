@@ -74,11 +74,11 @@
 		zip_code = '$zip_code' AND 
 		country = '$country'";
 		$result = mysqli_query($conn, $query);
-		// if there is customer in db, take it out
-		if($result){
-			$row = mysqli_fetch_assoc($result);
+		$row = mysqli_fetch_assoc($result);
+		if($row){
 			return $row['customerid'];
-		} else {
+		}
+		else{
 			return null;
 		}
 	}

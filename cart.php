@@ -43,7 +43,7 @@ if (isset($book_isbn)) {
 // if save change button is clicked , change the qty of each bookisbn
 if (isset($_POST['save_change'])) {
 	foreach ($_SESSION['cart'] as $isbn => $qty) {
-		if(!preg_match("/^[0-9]*$/",$_POST["$isbn"])){
+		if(!is_numeric($_POST["$isbn"])){
 			echo '<script>alert("Quantity must have numeric value!!");
 			window.location = "cart.php";
 			</script>';

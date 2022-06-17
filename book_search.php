@@ -65,6 +65,7 @@
   <form action="book_filter.php" method="POST">
   <div class="dropdown" >
   <select class="form-control" name="filter" placeholder="Choose Category.....">
+  <option value="select">Choose Category.....</option>
   <option value="Best seller">Best Seller</option>
   <option value="Recommended">Recommended</option>
   <option value="Limited edition">Limited Edition</option>
@@ -79,9 +80,12 @@
   </div>
   </div>  
   <br>   
-   <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
+   <?php  if(!mysqli_num_rows($result)){
+            echo '<p class = "lead text-warning">Result not Found!!!</div>';
+            exit;}
+   for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
       <div class="row">
-        <?php while($query_row = mysqli_fetch_assoc($result)){ ?>
+        <?php while($query_row = mysqli_fetch_assoc($result)){?>
           <div class="col-md-3">
             <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
