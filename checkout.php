@@ -107,7 +107,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				"description": "Transaction",
 				"order_id": content.id,
 				"handler": function(response) {
-					window.location.href = "http://localhost/bookstore/payment-success.php"
+					window.location.href = `http://localhost/bookstore/payment-success.php?name=${document.getElementById("name").value}&address=${document.getElementById("address").value}`
 				},
 			};
 			var rzp1 = new Razorpay(options);

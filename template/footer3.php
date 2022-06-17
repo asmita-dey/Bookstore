@@ -17,6 +17,7 @@
            width: 20%;
            padding:10px;
            height:150px;
+           font-size: 1.8rem;
        }
        .row1:after{
             content:"";
@@ -31,7 +32,7 @@
     <nav class="navbar navbar-bottom">
         <div class="row1">
           <div class="column">
-				<h3><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TECHHUB</b></h3>
+				<h3><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOOKCLUB</b></h3>
 				<p>&nbsp;&nbsp;
 					<a href="#" class="link-1">Home</a>|
 					<a href="#">About</a>|
@@ -50,7 +51,7 @@
             </div>
 
             <div class="column">
-                <br><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELP</b></p>
+                <br><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELP</b></p>
                 <a href="#">&nbsp;&nbsp;Returns and Refunds</a><br>
                 <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shipping Cost</a><br>
                 <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Track Orders</a>
@@ -74,7 +75,7 @@
 
             <div class="column">
 				<br><p>
-					<b>TO KNOW MORE.....</b><br>
+					<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TO KNOW MORE.....</b><br>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. 
 				</p>
 				<div>

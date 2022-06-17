@@ -1,25 +1,22 @@
-<?php
-	$title = "Register";
-	require_once "./template/header2.php";
-?>
+<!DOCTYPE html>
 <head>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="./bootstrap/css/jumbotron.css" rel="stylesheet">
     <link href="./bootstrap/css/background.css" rel="stylesheet">
     <link href="./bootstrap/css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/style.css">
 </head>
 <body>
-    <br>
     <section class="Form my-4 mx-5" >
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-5">
-                    <img src="http://denovati.com/wp-content/uploads/2014/08/Curriculum-Design-and-Review.png" class="img-responsive" alt=""
+                    <img src="register.svg" class="img-responsive" alt=""
                     height = 300px width = 500px>
                 </div>
                 <div class="col-lg-7 px-5 pt-5">
-                    <br><br><h4><b>Register Now :</b></h4>
+                    <br><br><h3><b>&nbsp;&nbsp;Register Now :</b></h3>
                     <form action = "registration.php" method = "POST">
                         <div class="form-row">
                             <div class="col-lg-7">
@@ -43,15 +40,19 @@
                         </div>
                         <div class="form-row">
                             <div class="col-lg-7">
-                                <br><br><input type="submit" class="btn1 mt-4 mb-5" value = "Register"/>
+                                <br><br><input type="submit" class="button2" value = "Register"/>
                             </div>
                         </div>
                     </form>
                     </div>
             </div>
         </div>  
-</section>
+    </section>
+<br>
+<br>
+<br>
 </body>
+</html>
 <?php
 require_once "./template/footer3.php";
 ?>

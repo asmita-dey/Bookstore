@@ -14,9 +14,8 @@
   }
 ?>
 <head>
- <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="search.css"> 
-  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="bootstrap/css/style.css">
     <style>
        *{
            box-sizing:border-box;
@@ -24,7 +23,7 @@
        .column1{
            float: left;
            width: 50%;
-           padding:0px;
+           padding:10px;
        }
        .column2{
            float: left;
@@ -45,35 +44,38 @@
   </head>
   <body>
   <br>
+  <h2 ><b><center>PRODUCTS</center></b></h2>
+  <br>
+  <br>
   <div class = "row1">
-  <div class = "column1">
-  <div class="search">
-  <form action="book_search.php" method = "POST">
-  <input type="text" placeholder=" Search....."  name="search"/>
-   <button>   
-   <i class="fa fa-search"  style="font-size: 18px;"> </i>
-   </button>   
-   </form>   
-   </div>
+    <div class = "column1">
+      <div class="search">
+        <form action="book_search.php" method = "POST">
+          <input type="text" placeholder=" Search....."  name="search"/>
+            <button>   
+            <i class="fa fa-search"  style="font-size: 18px;"> </i>
+            </button>   
+        </form>   
+      </div>
     </div>
 
-  <div class = "column2">
-  <form action="book_filter.php" method="POST">
-  <div class="dropdown" >
-  <select class="form-control" name="filter" placeholder="Choose Category.....">
-  <option value="select">Choose Category.....</option>
-  <option value="Best seller">Best Seller</option>
-  <option value="Recommended">Recommended</option>
-  <option value="Limited edition">Limited Edition</option>
-  </select>
-  </div>
-  </div>
-  <div class = "column3">
-  <button>   
-   <i class="fa fa-filter"  style="font-size: 18px;"> </i>
-   </button> 
-  </form>
-  </div>
+    <div class = "column2">
+       <form action="book_filter.php" method="POST">
+          <div class="dropdown" >
+            <select class="form-control" name="filter" placeholder="Choose Category.....">
+            <option value="select">Choose Category.....</option>
+            <option value="Best seller">Best Seller</option>
+            <option value="Recommended">Recommended</option>
+            <option value="Limited edition">Limited Edition</option>
+            </select>
+          </div>
+    </div>
+    <div class = "column3">
+      <button>   
+      <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+      </button> 
+        </form>
+     </div>
   </div>  
   <br>   
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>

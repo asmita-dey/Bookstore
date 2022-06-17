@@ -20,6 +20,7 @@
 	require "./template/header.php";
 	// connect database
 	$conn = db_connect();
+	var_dump($_GET);
     extract($_SESSION['ship']);
    
    if(isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))){
