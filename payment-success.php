@@ -20,16 +20,11 @@
 	require "./template/header.php";
 	// connect database
 	$conn = db_connect();
-<<<<<<< HEAD
     $name = $_GET['name'];
 	$address = $_GET['address'];
 	$city = $_GET['city'];
 	$zip_code = $_GET['zip_code'];
 	$country = $_GET['country'];
-=======
-	var_dump($_GET);
-    extract($_SESSION['ship']);
->>>>>>> 6c09f02396f364b75a7197459c10f2eeb969cfdf
    
    if(isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))){
     $customerid = getCustomerId($name, $address, $city, $zip_code, $country);
@@ -75,7 +70,8 @@
 <table class="table">
          <tr>
 			 <td>Order_ID: <?php echo "$orderid"; ?></td>
-			 <td>Book_ISBN: <?php echo "$isbn"; ?></td>
+			 <td>Customer Name: <?php echo "$name"; ?></td>
+			 <td>Customer Address: <?php echo "$address"; ?></td>
 			 <td>Amount: Rs.<?php echo "$amount"; ?></td> 	
 </table>	
 </div>

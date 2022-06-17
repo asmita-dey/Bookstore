@@ -1,9 +1,5 @@
 <?php
 session_start();
-if(!$_SESSION['email'])
-{
-  header("Location: user_login.php");
-}
   $title = "Contact";
   require_once "./template/header.php";
 ?>

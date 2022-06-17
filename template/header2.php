@@ -15,14 +15,13 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
-          <b><a class="navbar-brand" href="index.php">BookClub</a></b>
+          <b><a class="navbar-brand" href="index.php">TechHub</a></b>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>    
-          <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>
-          <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>     
+          <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>   
           </ul>
         </div>
       </div>     
