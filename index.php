@@ -92,7 +92,9 @@
   <div class="box-container">
 
     <?php
-      $select_products=mysqli_query($conn,"SELECT * FROM `books` LIMIT 9") or die('query failed');
+      $select_products=mysqli_query($conn,"SELECT books.book_isbn, books.book_title,
+      books.book_author,books.book_price, books.book_image, category.category FROM `books` JOIN `category` 
+      WHERE books.book_isbn = category.book_isbn AND category.category NOT LIKE 'None' LIMIT 9") or die('query failed');
       if(mysqli_num_rows($select_products)>0)
       {
         while($fetch_products=mysqli_fetch_assoc($select_products))
@@ -107,7 +109,7 @@
                 <div class="name"><?php echo $fetch_products['book_title']; ?></div> 
                 <div class="author"><i><b><?php echo $fetch_products['book_author']; ?></i></b></div>   
                 <div class="price"><b>Rs <?php echo $fetch_products['book_price']; ?> /- </b></div>
-                <div class="category"><?php echo $fetch_products['book_isbn']; ?></div>
+                <div class="category"><?php echo $fetch_products['category']; ?></div>
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['book_title']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['book_price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_products['book_image']; ?>">

@@ -18,6 +18,8 @@
            padding:10px;
            height:150px;
            font-size: 1.8rem;
+           text-align: center;
+           justify-content: center;
        }
        .row1:after{
             content:"";
@@ -32,33 +34,32 @@
     <nav class="navbar navbar-bottom">
         <div class="row1">
           <div class="column">
-				<h3><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BOOKCLUB</b></h3>
-				<p>&nbsp;&nbsp;
-					<a href="#" class="link-1">Home</a>|
-					<a href="#">About</a>|
+				<h3><b>TECHHUB</b></h3>
+				<p>
+					<a href="index.php" class="link-1">Home</a>|
+					<a href="about.php">About</a>|
 					<a href="#">Faq</a>|
-					<a href="#">Contact</a>
+					<a href="contact.php">Contact</a>
                 </p>
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    TechHub © 2022</p>
+				<p>TechHub © 2022</p>
             </div>
 
             <div class="column">
-                <br><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHER LINKS</b></p>
-                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policy</a><br>
-                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;Terms and Conditions</a><br>
-                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;News and Updates</a>
+                <br><p><b>OTHER LINKS</b></p>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms and Conditions</a><br>
+                <a href="#">News and Updates</a>
             </div>
 
             <div class="column">
-                <br><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELP</b></p>
-                <a href="#">&nbsp;&nbsp;Returns and Refunds</a><br>
-                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shipping Cost</a><br>
-                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Track Orders</a>
+                <br><p><b>HELP</b></p>
+                <a href="#">Returns and Refunds</a><br>
+                <a href="#">Shipping Cost</a><br>
+                <a href="#">Track Orders</a>
             </div>
 
           <div class="column">
-				<br><p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET IN TOUCH</b></p>
+				<br><p><b>GET IN TOUCH</b></p>
                 <div>
 					<i class="fa fa-map-marker"></i><span>
 					444 S. Cedros Ave,Solana Beach, California</span>
@@ -75,7 +76,7 @@
 
             <div class="column">
 				<br><p>
-					<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TO KNOW MORE.....</b><br>
+					<b>TO KNOW MORE.....</b><br>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. 
 				</p>
 				<div>

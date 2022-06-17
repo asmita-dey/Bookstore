@@ -70,7 +70,8 @@
 <table class="table">
          <tr>
 			 <td>Order_ID: <?php echo "$orderid"; ?></td>
-			 <td>Book_ISBN: <?php echo "$isbn"; ?></td>
+			 <td>Customer Name: <?php echo "$name"; ?></td>
+			 <td>Customer Address: <?php echo "$address"; ?></td>
 			 <td>Amount: Rs.<?php echo "$amount"; ?></td> 	
 </table>	
 </div>
