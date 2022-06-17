@@ -1,20 +1,24 @@
 .background{
     min-height: 100vh;
     width: 100%;
+<<<<<<< HEAD
     background-color: w;
+=======
+    background-image: url("");
+>>>>>>> 6c09f02396f364b75a7197459c10f2eeb969cfdf
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color:darkslategray;
+    color:rgb(0, 0, 0);
     position: relative;
     padding: 0 8%;
 }
 .jumbotron{
-    background-image: url("https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("C:\xampp\htdocs\bookstore\bootstrap\img\headbook.jpg");
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    color:rgb(46, 45, 48);
+    color:rgb(30, 30, 30);
     position: relative;
     padding-left: 200px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -26,11 +30,15 @@
 .background1{
     min-height: 100vh;
     width: 100%;
+<<<<<<< HEAD
     background-color: whitesmoke;
+=======
+    background-image: url("");
+>>>>>>> 6c09f02396f364b75a7197459c10f2eeb969cfdf
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color:darkslategray;
+    color:rgb(24, 23, 23);
     position: relative;
     padding: 0 8%;
 }

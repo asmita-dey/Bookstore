@@ -21,7 +21,7 @@
           </button>
           <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
-          <a class="navbar-brand" href="index.php">TechHub</a>
+          <a class="navbar-brand" href="index.php">BookClub</a>
         </div>
 
         <!--/.navbar-collapse -->
@@ -46,5 +46,3 @@
     </div>
     <?php } ?>
     
-    <div class = "background1">
-    <div class="container" id="main">

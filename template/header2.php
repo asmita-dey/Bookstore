@@ -6,7 +6,7 @@
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="./bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="./bootstrap/css/jumbotron.css" rel="stylesheet">
-    <link href="./bootstrap/css/background.css" rel="stylesheet">
+    <link href="./bootstrap/css/background.css" rel="stylesheet">  
   </head>
 
   <body>
@@ -15,20 +15,22 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
           height = 35px width = 60px></a>
-          <a class="navbar-brand" href="index.php">TechHub</a>
+          <b><a class="navbar-brand" href="index.php">BookClub</a></b>
         </div>
-     </div>
- </nav>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>    
+          <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>
+          <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>     
+          </ul>
+        </div>
+      </div>     
+    </nav>
+
     <?php
-      if(isset($title) && ($title == "Admin"|| $title == "Index")){
+      if(isset($title) && ($title == "Admin"|| $title == "Index"))
     ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1><b>Welcome To TechHub</b></h1>
-        <p class="lead">Happy Reading!</p>
-      </div>
-    </div>
-    <?php } ?>
-    <div class = "background1">
-    <div class="container" id="main">
+    
+      
