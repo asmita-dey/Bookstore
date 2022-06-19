@@ -28,15 +28,25 @@
           padding:10px;
           
       }
+      .search{
+    font-size: 18px;
+    
+    } 
+    .search .search-txt{
+      border-radius: 5px;
+    }
       .column2{
           float: left;
-          width: 20%;
+          width: 22%;
           padding:10px;
       }
       .column3{
           float: left;
           width: 5%;
-          padding:13px;
+          padding:12px;
+      }
+      .column3 btn{
+        
       }
       .row1:after{
            content:"";
@@ -47,14 +57,16 @@
  </head>
  <body>
  <br>
- <h2 ><b><center>PRODUCTS</center></b></h2>
+ <h1><b><font size="8"><center> PRODUCTS<center></font></b></h1>
+ <br>
+ <br>
  <br>
 
  <div class = "row1">
    <div class = "column1">
      <div class="search">
        <form action="book_search.php" method = "POST">
-         <input type="text" placeholder=" Search....."  name="search"/>
+         <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
            <button>   
            <i class="fa fa-search"  style="font-size: 18px;"> </i>
            </button>   
@@ -74,7 +86,7 @@
          </div>
      </div>
      <div class = "column3">
-     <button>   
+     <button >   
      <i class="fa fa-filter"  style="font-size: 18px;"> </i>
      </button> 
        </form>
@@ -95,7 +107,7 @@
      </div>
      <div class = "column3">
      <button>   
-     <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+     <i class="fa fa-filter"  style="font-size: 19px;"> </i>
      </button> 
        </form>
     </div>
