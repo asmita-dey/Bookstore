@@ -22,18 +22,18 @@
        }
        .column1{
            float: left;
-           width: 50%;
+           width: 25%;
            padding:10px;
        }
        .column2{
            float: left;
-           width: 45%;
-           padding:0px;
+           width: 32.5%;
+           padding:10px;
        }
        .column3{
            float: left;
            width: 5%;
-           padding:6px;
+           padding:13px;
        }
        .row1:after{
             content:"";
@@ -46,7 +46,7 @@
   <br>
   <h2 ><b><center>PRODUCTS</center></b></h2>
   <br>
-  <br>
+
   <div class = "row1">
     <div class = "column1">
       <div class="search">
@@ -69,8 +69,28 @@
             <option value="Limited edition">Limited Edition</option>
             </select>
           </div>
-    </div>
-    <div class = "column3">
+      </div>
+      <div class = "column3">
+      <button>   
+      <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+      </button> 
+        </form>
+     </div>
+
+     <div class = "column2">
+       <form action="book_genre.php" method="POST">
+          <div class="dropdown" >
+            <select class="form-control" name="filter" placeholder="Choose Genres.....">
+            <option value="select">Choose Genre.....</option>
+            <option value="Web/App development">Web/App Development</option>
+            <option value="Coding">Coding</option>
+            <option value="Machine learning">Machine Learning</option>
+            <option value="Hardware/Networking">Hardware and Networking</option>
+            <option value="Others">Others</option>
+            </select>
+          </div>
+      </div>
+      <div class = "column3">
       <button>   
       <i class="fa fa-filter"  style="font-size: 18px;"> </i>
       </button> 

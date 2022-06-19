@@ -20,7 +20,7 @@
 
 	// get book data
 	$query = "SELECT books.book_isbn, books.book_title,  books.book_author,  books.book_image,  books.book_descr, books.book_price,
-	books.publisherid, category.category FROM books INNER JOIN category WHERE books.book_isbn = '$book_isbn' AND books.book_isbn = category.book_isbn";
+	books.publisherid, category.category, category.genre FROM books INNER JOIN category WHERE books.book_isbn = '$book_isbn' AND books.book_isbn = category.book_isbn";
 	$result = mysqli_query($conn, $query);
 	if(!$result){
 		echo "Can't retrieve data " . mysqli_error($conn);
@@ -61,6 +61,10 @@
 			<tr>
 				<th>Category</th>
 				<td><input type="text" name="category" value="<?php echo $row['category'];?>" required></td>
+			</tr>
+			<tr>
+				<th>Genre</th>
+				<td><input type="text" name="genre" value="<?php echo $row['genre'];?>" required></td>
 			</tr>
 		</table>
 		<input type="submit" name="save_change" value="Change" class="btn btn-primary">

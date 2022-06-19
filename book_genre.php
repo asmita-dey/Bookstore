@@ -5,8 +5,14 @@
   require_once "./functions/database_functions.php";
   $conn = db_connect();
 
-  $image = $_POST['search'];
-  $query = "SELECT book_isbn, book_image,  book_title,  book_author,  book_price FROM books WHERE book_title LIKE '%$image%' OR book_author LIKE '%$image%'";
+  $image = $_POST['filter'];
+  if($image=="select"){
+    echo '<script>
+			window.location = "books.php";
+			</script>';
+  }
+  $query = "SELECT books.book_isbn, books.book_image,  books.book_title,  books.book_author,  books.book_price, 
+  category.genre FROM books  INNER JOIN category WHERE category.genre = '$image' AND books.book_isbn = category.book_isbn";
   
   $result = mysqli_query($conn, $query);
   if(!$result){
@@ -14,12 +20,12 @@
     exit;
   }
 
-  $title = "Books Search";
+  $title = "Books Genre";
   require_once "./template/header.php";
 ?> 
   <head>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="search.css"> 
+  <link rel="stylesheet" href="search.css">
   <link rel="stylesheet" href="bootstrap/css/style.css">
    <style>
       *{
@@ -102,13 +108,10 @@
        </form>
     </div>
  </div>  
- <br>      
-   <?php  if(!mysqli_num_rows($result)){
-            echo '<p class = "lead text-warning">Result not Found!!!</div>';
-            exit;}
-   for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
+ <br>   
+   <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
       <div class="row">
-        <?php while($query_row = mysqli_fetch_assoc($result)){?>
+        <?php while($query_row = mysqli_fetch_assoc($result)){ ?>
           <div class="col-md-3">
             <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
