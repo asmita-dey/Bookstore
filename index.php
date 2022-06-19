@@ -52,7 +52,7 @@
         {    
    ?>
             <div class="box">
-              <form action="" method="post" >
+              <form action="cart.php" method="post" >
        
                 <img class="img" src="./bootstrap/img/<?php echo $fetch_products['book_image']; ?>">
                 <br>
@@ -63,8 +63,9 @@
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['book_title']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['book_price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_products['book_image']; ?>">
-                
-                <a href="cart.php" class="button">Add To Cart</a>   
+                <input type="hidden" name="bookisbn" value="<?php echo $fetch_products['book_isbn'];?>">
+          
+                <input type="submit" class="button" value="Add To Cart" name="cart" >
               </form>
             </div>
     <?php
@@ -101,7 +102,7 @@
         {    
    ?>
             <div class="box">
-              <form action="" method="post" >
+              <form action="cart.php" method="post" >
        
                 <img class="img" src="./bootstrap/img/<?php echo $fetch_products['book_image']; ?>">
                 <br>
@@ -113,8 +114,9 @@
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['book_title']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['book_price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_products['book_image']; ?>">
-                
-                <a href="cart.php" class="button">Add To Cart</a>   
+                <input type="hidden" name="bookisbn" value="<?php echo $fetch_products['book_isbn'];?>">
+          
+                <input type="submit" class="button" value="Add To Cart" name="cart" >
               </form>
             </div>
     <?php

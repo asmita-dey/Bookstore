@@ -66,7 +66,7 @@
     <div class="box-container">
 
    <?php  if(!mysqli_num_rows($result)){
-            echo '<p class = "lead text-warning">Result not Found!!!</div>';
+            echo '<center><p class = "lead text-warning">Result not Found!!!</p></center>';
             exit;}
             
             

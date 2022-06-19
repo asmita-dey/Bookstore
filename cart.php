@@ -78,7 +78,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				<th>Image</th>
 				<th>Price</th>
 				<th>Quantity</th>
-				<th> Action</th>
+				<th>Action</th>
 				<th>Total</th>
 			</tr>
 			<?php
@@ -91,7 +91,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 					<td><img class="img-responsive img-thumbnail" src="http://localhost/bookstore/bootstrap/img/<?php echo $book['book_image']; ?>" /></td>
 					<td><?php echo "Rs" . $book['book_price']; ?></td>
 					<td><input type="number" value="<?php echo $qty; ?>" size="2" name="<?php echo $isbn; ?>"></td>
-					<td><input type="submit" class="button1" style="padding:10px 14px; font-size: 14px" name="update" value="Update"></td>
+					<td><input type="submit" class="button1" style="padding:10px 14px; font-size: 14px" name="save_change" value="Update"></td>
 					<td><?php echo "Rs" . $qty * $book['book_price']; ?></td>
 				</tr>
 			<?php } ?>
@@ -104,7 +104,6 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				<th>&nbsp;&nbsp;<?php echo "Rs" . $_SESSION['total_price']; ?></th>
 			</tr>
 		</table>
-		<input type="submit" class="button1" style="font-size: 16px; padding:10px 17px;margin-left: 40px;" name="save_change" value="Save Changes">
 	</form>
 	<br /><br />
 	<a href="checkout.php" class="button" style="padding: 12px 15px;font-size: 18px; margin-left: 40px;">Purchase</a>
@@ -112,7 +111,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 	class="button">Continue Shopping</a>
 <?php
 } else {
-	echo "<p class=\"text-warning\">Your cart is empty! Please make sure you add some books in it!</p>";
+	echo "<br><h4><p class=\"text-warning\"><center>Your cart is empty! Please make sure you add some books in it!</center></p></h4>";
 }
 if (isset($conn)) {
 	mysqli_close($conn);

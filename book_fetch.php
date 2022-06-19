@@ -24,7 +24,7 @@
       }
       .column1{
           float: left;
-          width: 37%;
+          width: 40%;
           padding:10px;
           
       }

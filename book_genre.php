@@ -8,7 +8,7 @@
   $image = $_POST['filter'];
   if($image=="select"){
     echo '<script>
-			window.location = "books.php";
+			window.location = "book_fetch.php";
 			</script>';
   }
   $query = "SELECT books.book_isbn, books.book_image,  books.book_title,  books.book_author,  books.book_price, 

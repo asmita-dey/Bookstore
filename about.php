@@ -1,9 +1,9 @@
 <?php
+$title = "About";
 require_once "./template/header2.php";
 require_once "./functions/database_functions.php";
 $conn = db_connect();
 ?>
-
 
 <!DOCTYPE html>
 <title>about us</title>
