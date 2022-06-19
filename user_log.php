@@ -26,7 +26,7 @@
         exit;
     }
     else{
-       header("Location: books.php");
+       header("Location: book_fetch.php");
        $_SESSION['email']=$email;
        exit;
     }

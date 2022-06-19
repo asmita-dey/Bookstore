@@ -59,15 +59,17 @@
         text-align: center;
 		justify-content: center;
     }
-</style>
+	</style>
+	<link rel="stylesheet" href="bootstrap/css/style.css">
+
 </head>
 <body>
 <div class = "pay">
-<p>Do not refresh this page</p> 
+<p><h4>Do not refresh this page</h4></p> 
 <img src = "https://freepngimg.com/thumb/green_tick/27894-7-green-tick-transparent-background-thumb.png">
 <h3 style="color: green;"><b>Payment Successfull!!</b></h3>
-<p class="lead text-success">Your order has been placed sucessfully!!!!!Your Customer ID is <?php echo "$customerid"; ?></p>
-<table class="table">
+<p class="lead text-success">Your order has been placed sucessfully!! Your Customer ID is <?php echo "$customerid"; ?></p>
+<table class="table" style="font-size: 1.8rem;">
          <tr>
 			 <td>Order_ID: <?php echo "$orderid"; ?></td>
 			 <td>Customer Name: <?php echo "$name"; ?></td>
@@ -75,7 +77,10 @@
 			 <td>Amount: Rs.<?php echo "$amount"; ?></td> 	
 </table>	
 </div>
-<p>Save this for future reference.</p>
+<p><h4>&nbsp;&nbsp;&nbsp;Save this for future reference.</p></h4>
+<br>
+<br>
+<center><a href="book_fetch.php" class="button" style="font-size: 1.6rem;padding:11px 18px">Continue Shopping</a></center>
 <?php
     if(isset($conn)){
         mysqli_close($conn);

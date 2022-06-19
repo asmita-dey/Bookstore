@@ -22,7 +22,10 @@
   require "./template/header.php";
 ?>
       <!-- Example row of columns -->
-      <p class="lead" style="margin: 25px 0"><a href="books.php">Books</a> : <?php echo $row['book_title']; ?></p>
+      <head><link rel="stylesheet" href="bootstrap/css/style.css">
+      
+      </head>
+      <h3  style="margin: 25px 0; padding:5px 13px 0">Book : <?php echo $row['book_title']; ?></h3>
       <div class="row">
         <div class="col-md-3 text-center">
           <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $row['book_image']; ?>">
@@ -62,7 +65,7 @@
           </table>
           <form method="post" action="cart.php">
             <input type="hidden" name="bookisbn" value="<?php echo $book_isbn;?>">
-            <input type="submit" value="Add to cart" name="cart" class="btn btn-primary">
+            <input type="submit" class="button" style="padding: 9px 15px;font-size: 16px"  value="Add to cart" name="cart" >
           </form>
        	</div>
       </div>
