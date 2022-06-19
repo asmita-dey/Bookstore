@@ -81,7 +81,7 @@
     <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
       <div class="row">
         <?php while($query_row = mysqli_fetch_assoc($result)){ ?>
-          <div class="col-md-3">
+          <div class="box">
             <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
               <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
             </a>

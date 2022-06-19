@@ -20,7 +20,7 @@
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>    
+          <li><a href="book_fetch.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>    
           <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>   
           </ul>
         </div>

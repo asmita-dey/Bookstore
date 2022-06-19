@@ -78,7 +78,7 @@
   </div>
   <br>
   <br>
-  <center><a href="books.php" class="button1">Load More</a></center>
+  <center><a href="book_fetch.php" class="button1">Load More</a></center>
 </section>
 <br>
 <br>

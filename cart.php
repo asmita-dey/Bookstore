@@ -70,6 +70,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 	$_SESSION['total_price'] = total_price($_SESSION['cart']);
 	$_SESSION['total_items'] = total_items($_SESSION['cart']);
 ?>
+<head><link rel="stylesheet" href="bootstrap/css/style.css"></head>
 	<form action="cart.php" method="post">
 		<table class="table">
 			<tr>
@@ -77,6 +78,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				<th>Image</th>
 				<th>Price</th>
 				<th>Quantity</th>
+				<th> Action</th>
 				<th>Total</th>
 			</tr>
 			<?php
@@ -89,6 +91,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 					<td><img class="img-responsive img-thumbnail" src="http://localhost/bookstore/bootstrap/img/<?php echo $book['book_image']; ?>" /></td>
 					<td><?php echo "Rs" . $book['book_price']; ?></td>
 					<td><input type="number" value="<?php echo $qty; ?>" size="2" name="<?php echo $isbn; ?>"></td>
+					<td><input type="submit" class="button1" style="padding:10px 14px; font-size: 14px" name="update" value="Update"></td>
 					<td><?php echo "Rs" . $qty * $book['book_price']; ?></td>
 				</tr>
 			<?php } ?>
@@ -97,14 +100,16 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				<th>&nbsp;</th>
 				<th>&nbsp;</th>
 				<th><?php echo $_SESSION['total_items']; ?></th>
-				<th><?php echo "Rs" . $_SESSION['total_price']; ?></th>
+				<th>&nbsp;</th>
+				<th>&nbsp;&nbsp;<?php echo "Rs" . $_SESSION['total_price']; ?></th>
 			</tr>
 		</table>
-		<input type="submit" class="btn btn-primary" name="save_change" value="Save Changes">
+		<input type="submit" class="button1" style="font-size: 16px; padding:10px 17px;margin-left: 40px;" name="save_change" value="Save Changes">
 	</form>
 	<br /><br />
-	<a href="checkout.php" class="btn btn-primary">Purchase</a>
-	<a href="books.php" class="btn btn-primary">Continue Shopping</a>
+	<a href="checkout.php" class="button" style="padding: 12px 15px;font-size: 18px; margin-left: 40px;">Purchase</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="book_fetch.php" style="padding: 12px 15px;font-size: 18px"
+	class="button">Continue Shopping</a>
 <?php
 } else {
 	echo "<p class=\"text-warning\">Your cart is empty! Please make sure you add some books in it!</p>";

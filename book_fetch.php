@@ -19,15 +19,85 @@
 <html>
 <head>
   <link rel="stylesheet" href="bootstrap/css/style.css">
+
+  <style>
+       *{
+           box-sizing:border-box;
+       }
+       .column1{
+           float: left;
+           width: 50%;
+           padding:5px;
+       }
+       .column2{
+           float: left;
+           width: 32%;
+           padding:6px;
+       }
+       
+       .column3{
+           float: left;
+           width: 5%;
+           padding:6px;
+       }
+       .row1:after{
+            content:"";
+            display:table;
+            clear:both;
+       }
+    </style>
 </head>
 <body>
     <br>
     
     
     <h2><b><font size="8"><center> PRODUCTS<center></font></b></h2>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
+   
+    <div class = "row1">
+    <div class = "column1">
+      <div class="search">
+        <form action="book_search.php" method = "POST">
+          <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
+            <button>   
+            <i class="fa fa-search"  style="font-size: 18px;"> </i>
+            </button>   
+        </form>   
+      </div>
+    </div>
+
+    <div class = "column2">
+       <form action="book_filter.php" method="POST">
+          <div class="dropdown" >
+            <select class="form-control" name="filter" placeholder="Choose Category.....">
+            <option value="select">Choose Category.....</option>
+            <option value="Best seller">Best Seller</option>
+            <option value="Recommended">Recommended</option>
+            <option value="Limited edition">Limited Edition</option>
+            </select>
+          </div>
+    </div>
+    <div class = "column3">
+      <button>   
+      <i class="fa fa-filter"  style="font-size: 18px;padding: 3px "> </i>
+      </button> 
+        </form>
+     </div>
+  </div>  
+    
+  
+   
+   
+       
+  <br>
+  <br>
+  <br>      
+     
+  
+
+    
 
 <section class="products">
 
@@ -53,7 +123,7 @@
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['book_price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_products['book_image']; ?>">
                 
-                <a href="book.php" class="button">Get Details</a>   
+                <a href="book.php?bookisbn=<?php echo $fetch_products['book_isbn'];?>" class="button">Get Details</a>   
               </form>
             </div>
     <?php

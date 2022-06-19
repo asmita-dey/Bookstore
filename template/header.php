@@ -27,7 +27,7 @@
         <!--/.navbar-collapse -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="books.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>
+              <li><a href="book_fetch.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>
               <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>
               <li><a href="contact.php"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; Contact</a></li>
               <li><a href="admin_signout.php"><span class="glyphicon glyphicon-off"></span>&nbsp; Signout</a></li>

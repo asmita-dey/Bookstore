@@ -8,7 +8,7 @@
   $image = $_POST['filter'];
   if($image=="select"){
     echo '<script>
-			window.location = "books.php";
+			window.location = "book_fetch.php";
 			</script>';
   }
   $query = "SELECT books.book_isbn, books.book_image,  books.book_title,  books.book_author,  books.book_price, 
@@ -27,78 +27,74 @@
  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="search.css"> 
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-       *{
-           box-sizing:border-box;
-       }
-       .column1{
-           float: left;
-           width: 50%;
-           padding:0px;
-       }
-       .column2{
-           float: left;
-           width: 45%;
-           padding:0px;
-       }
-       .column3{
-           float: left;
-           width: 5%;
-           padding:6px;
-       }
-       .row1:after{
-            content:"";
-            display:table;
-            clear:both;
-       }
-    </style>
-  </head>
-  <body>
-  <br>
-  <div class = "row1">
-  <div class = "column1">
-  <div class="search">
-  <form action="book_search.php" method = "POST">
-  <input type="text" placeholder=" Search....."  name="search"/>
-   <button>   
-   <i class="fa fa-search"  style="font-size: 18px;"> </i>
-   </button>   
-   </form>   
-   </div>
-    </div>
+  <link rel="stylesheet" href="bootstrap/css/style.css">
 
-  <div class = "column2">
-  <form action="book_filter.php" method="POST">
-  <div class="dropdown" >
-  <select class="form-control" name="filter" placeholder="Choose Category.....">
-  <option value="select">Choose Category.....</option>
-  <option value="Best seller">Best Seller</option>
-  <option value="Recommended">Recommended</option>
-  <option value="Limited edition">Limited Edition</option>
-  </select>
+<style>
+     *{
+         box-sizing:border-box;
+     }
+    .search{
+    font-size: 18px;
+    
+    } 
+    .search .search-txt{
+      border-radius: 5px;
+    }
+     
+     .row1:after{
+          content:"";
+          display:table;
+          clear:both;
+     }
+  </style>
+</head>
+<body>
+  <br> 
+  <br>
+
+  
+  <center><div class="search">
+      <form action="book_search.php" method = "POST">
+        <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
+          <button>   
+          <i class="fa fa-search"  style="font-size: 18px;"> </i>
+          </button>   
+      </form>   
+    </div></center>
   </div>
-  </div>
-  <div class = "column3">
-  <button>   
-   <i class="fa fa-filter"  style="font-size: 18px;"> </i>
-   </button> 
-  </form>
-  </div>
-  </div>  
-  <br>   
+
+  
+</div> 
+</body>
+<br>
+  <br> 
+<section class="products">
+
+  <div class="box-container">
+  
    <?php for($i = 0; $i < mysqli_num_rows($result); $i++){ ?>
-      <div class="row">
+      
         <?php while($query_row = mysqli_fetch_assoc($result)){ ?>
-          <div class="col-md-3">
-            <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
-              <img class="img-responsive img-thumbnail" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>">
-            </a>
-          <h4><b><p><?php echo $query_row['book_title']; ?></p></b></h4>
-          <h4><i><p><?php echo $query_row['book_author']; ?></p></i></h4>
-          <h5><b><p style = "color: green;">Price : Rs.<?php echo $query_row['book_price']; ?></p></b></h5>
-          <h5><i><p>Free delivery within 3 days.</p></i></h5>
-          <a href="book.php?bookisbn=<?php echo $query_row['book_isbn'];?>" class="btn btn-primary">Get Details</a>
+          
+
+        <div class="box">
+              <form action="" method="post" >
+              <a href="book.php?bookisbn=<?php echo $query_row['book_isbn']; ?>">
+       
+                <img class="img" src="./bootstrap/img/<?php echo $query_row['book_image']; ?>"></a>
+                <br>
+                <br>
+                <div class="name"><?php echo $query_row['book_title']; ?></div> 
+                <div class="author"><i><b><?php echo $query_row['book_author']; ?></i></b></div>   
+                <div class="price"><b>Rs <?php echo$query_row['book_price']; ?> /- </b></div>
+                <input type="hidden" name="product_name" value="<?php echo $query_row['book_title']; ?>">
+                <input type="hidden" name="product_price" value="<?php echo $query_row['book_price']; ?>">
+                <input type="hidden" name="product_image" value="<?php echo $query_row['book_image']; ?>">
+                
+                <a href="book.php?bookisbn=<?php echo $query_row['book_isbn'];?>" class="button">Get Details</a>   
+              </form>
         </div>
+
         <?php
           $count++;
           if($count >= 4){
@@ -108,6 +104,8 @@
           } ?> 
       </div>
       <br>
+  </div>
+</section>
 <?php
       }
   if(isset($conn)) { mysqli_close($conn); }
