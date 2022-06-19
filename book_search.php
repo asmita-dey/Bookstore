@@ -19,92 +19,9 @@
 ?> 
   <head>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
   <link rel="stylesheet" href="search.css"> 
   <link rel="stylesheet" href="bootstrap/css/style.css">
-   <style>
-      *{
-          box-sizing:border-box;
-      }
-      .column1{
-          float: left;
-          width: 25%;
-          padding:10px;
-      }
-      .column2{
-          float: left;
-          width: 32.5%;
-          padding:10px;
-      }
-      .column3{
-          float: left;
-          width: 5%;
-          padding:13px;
-      }
-      .row1:after{
-           content:"";
-           display:table;
-           clear:both;
-      }
-   </style>
- </head>
- <body>
- <br>
- <h2 ><b><center>PRODUCTS</center></b></h2>
- <br>
-
- <div class = "row1">
-   <div class = "column1">
-     <div class="search">
-       <form action="book_search.php" method = "POST">
-         <input type="text" placeholder=" Search....."  name="search"/>
-           <button>   
-           <i class="fa fa-search"  style="font-size: 18px;"> </i>
-           </button>   
-       </form>   
-     </div>
-   </div>
-
-   <div class = "column2">
-      <form action="book_filter.php" method="POST">
-         <div class="dropdown" >
-           <select class="form-control" name="filter" placeholder="Choose Category.....">
-           <option value="select">Choose Category.....</option>
-           <option value="Best seller">Best Seller</option>
-           <option value="Recommended">Recommended</option>
-           <option value="Limited edition">Limited Edition</option>
-           </select>
-         </div>
-     </div>
-     <div class = "column3">
-     <button>   
-     <i class="fa fa-filter"  style="font-size: 18px;"> </i>
-     </button> 
-       </form>
-    </div>
-
-    <div class = "column2">
-      <form action="book_genre.php" method="POST">
-         <div class="dropdown" >
-           <select class="form-control" name="filter" placeholder="Choose Genres.....">
-           <option value="select">Choose Genre.....</option>
-           <option value="Web/App development">Web/App Development</option>
-           <option value="Coding">Coding</option>
-           <option value="Machine learning">Machine Learning</option>
-           <option value="Hardware/Networking">Hardware and Networking</option>
-           <option value="Others">Others</option>
-           </select>
-         </div>
-     </div>
-     <div class = "column3">
-     <button>   
-     <i class="fa fa-filter"  style="font-size: 18px;"> </i>
-     </button> 
-       </form>
-    </div>
- </div>  
- <br>      
-=======
+       
     <style>
        *{
            box-sizing:border-box;
@@ -148,7 +65,6 @@
 
     <div class="box-container">
 
->>>>>>> 373fc3697d06780e877a48bc71ca83f89197b722
    <?php  if(!mysqli_num_rows($result)){
             echo '<p class = "lead text-warning">Result not Found!!!</div>';
             exit;}
