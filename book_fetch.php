@@ -15,77 +15,91 @@
 ?>
 
 
-<!DOCTYPE html>
-<html>
 <head>
-  <link rel="stylesheet" href="bootstrap/css/style.css">
+ 
+ <link rel="stylesheet" href="bootstrap/css/style.css">
+   <style>
+      *{
+          box-sizing:border-box;
+      }
+      .column1{
+          float: left;
+          width: 37%;
+          padding:10px;
+          
+      }
+      .column2{
+          float: left;
+          width: 20%;
+          padding:10px;
+      }
+      .column3{
+          float: left;
+          width: 5%;
+          padding:13px;
+      }
+      .row1:after{
+           content:"";
+           display:table;
+           clear:both;
+      }
+   </style>
+ </head>
+ <body>
+ <br>
+ <h2 ><b><center>PRODUCTS</center></b></h2>
+ <br>
 
-  <style>
-       *{
-           box-sizing:border-box;
-       }
-       .column1{
-           float: left;
-           width: 50%;
-           padding:5px;
-       }
-       .column2{
-           float: left;
-           width: 32%;
-           padding:6px;
-       }
-       
-       .column3{
-           float: left;
-           width: 5%;
-           padding:6px;
-       }
-       .row1:after{
-            content:"";
-            display:table;
-            clear:both;
-       }
-    </style>
-</head>
-<body>
-    <br>
-    
-    
-    <h2><b><font size="8"><center> PRODUCTS<center></font></b></h2>
-    <br>
-    <br>
-    <br>
-   
-    <div class = "row1">
-    <div class = "column1">
-      <div class="search">
-        <form action="book_search.php" method = "POST">
-          <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
-            <button>   
-            <i class="fa fa-search"  style="font-size: 18px;"> </i>
-            </button>   
-        </form>   
-      </div>
+ <div class = "row1">
+   <div class = "column1">
+     <div class="search">
+       <form action="book_search.php" method = "POST">
+         <input type="text" placeholder=" Search....."  name="search"/>
+           <button>   
+           <i class="fa fa-search"  style="font-size: 18px;"> </i>
+           </button>   
+       </form>   
+     </div>
+   </div>
+
+   <div class = "column2">
+      <form action="book_filter.php" method="POST">
+         <div class="dropdown" >
+           <select class="form-control" name="filter" placeholder="Choose Category.....">
+           <option value="select">Choose Category.....</option>
+           <option value="Best seller">Best Seller</option>
+           <option value="Recommended">Recommended</option>
+           <option value="Limited edition">Limited Edition</option>
+           </select>
+         </div>
+     </div>
+     <div class = "column3">
+     <button>   
+     <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+     </button> 
+       </form>
     </div>
 
     <div class = "column2">
-       <form action="book_filter.php" method="POST">
-          <div class="dropdown" >
-            <select class="form-control" name="filter" placeholder="Choose Category.....">
-            <option value="select">Choose Category.....</option>
-            <option value="Best seller">Best Seller</option>
-            <option value="Recommended">Recommended</option>
-            <option value="Limited edition">Limited Edition</option>
-            </select>
-          </div>
-    </div>
-    <div class = "column3">
-      <button>   
-      <i class="fa fa-filter"  style="font-size: 18px;padding: 3px "> </i>
-      </button> 
-        </form>
+      <form action="book_genre.php" method="POST">
+         <div class="dropdown" >
+           <select class="form-control" name="filter" placeholder="Choose Genres.....">
+           <option value="select">Choose Genre.....</option>
+           <option value="Web/App development">Web/App Development</option>
+           <option value="Coding">Coding</option>
+           <option value="Machine learning">Machine Learning</option>
+           <option value="Hardware/Networking">Hardware and Networking</option>
+           <option value="Others">Others</option>
+           </select>
+         </div>
      </div>
-  </div>  
+     <div class = "column3">
+     <button>   
+     <i class="fa fa-filter"  style="font-size: 18px;"> </i>
+     </button> 
+       </form>
+    </div>
+ </div> 
     
   
    
