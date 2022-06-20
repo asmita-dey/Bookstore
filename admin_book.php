@@ -23,8 +23,13 @@
    <link rel="stylesheet" href="search.css"> 
    <style>
 	.table{
+<<<<<<< HEAD
 		width: 1200px;
 		border:4px black;
+=======
+		width: 100%;
+		border:3px black;
+>>>>>>> 419b85b211965885cd57ef4f34d78e1ae4765ab3
 		padding-right:50px;
 		padding: 100px 100px 100px 100px;
 		margin-left: 18px;
@@ -44,8 +49,9 @@
 	</style>
 
 </head>
+<br>
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
-   <div class="search">
+   <div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="admin_search.php" method = "POST">
    <input type="text" placeholder=" Search....."  name="search"/>
    <button>   
