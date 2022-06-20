@@ -24,7 +24,7 @@
    <style>
 	.table{
 		width: 1200px;
-		border:3px black;
+		border:4px black;
 		padding-right:50px;
 		padding: 100px 100px 100px 100px;
 		margin-left: 18px;
@@ -32,11 +32,16 @@
 		text-align: center;
 		background-color: rgb(255, 255, 255);
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-		justify-content: center;
+		justify-content: justify;
+	}
+	td{
+		text-align: left;
+	}
+	th{
+		text-align: justify;
 	}
 	
 	</style>
-
 
 </head>
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
@@ -51,18 +56,24 @@
  
 	<table class="table" style="margin-top: 40px">
 		<tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<th>&nbsp;</th>
 			<th>ISBN</th>
 			<th>Title</th>
 			<th>Author</th>
-			<th>Image</th>
-			<th>Description</th>
-			<th>Price</th>
+			<th><center>Image</center></th>
+			<th><center>Description</center></th>
+			<th><center>Price</center></th>
 			<th>Publisher</th>
+			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
 		</tr>
 		<?php while($row1 = mysqli_fetch_assoc($result1)){ ?>
 		<tr>
+			<td>&nbsp;</td>
 			<td><?php echo $row1['book_isbn']; ?></td>
 			<td><?php echo $row1['book_title']; ?></td>
 			<td><?php echo $row1['book_author']; ?></td>
@@ -72,8 +83,13 @@
 			<td><?php echo getPubName($conn, $row1['publisherid']); ?></td>
 			<td><a href="admin_edit.php?bookisbn=<?php echo $row1['book_isbn']; ?>">Edit</a></td>
 			<td><a href="admin_delete.php?bookisbn=<?php echo $row1['book_isbn']; ?>">Delete</a></td>
+			<td>&nbsp;</td>
 		</tr>
+
 		<?php } ?>
+		<tr>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
 	</table>
 
 
