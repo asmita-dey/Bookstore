@@ -17,8 +17,28 @@
 		exit;
 	}
 ?>
+<head>
+	<link rel="stylesheet" href="bootstrap/css/style.css">
    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="search.css"> 
+   <style>
+	.table{
+		width: 1200px;
+		border:3px black;
+		padding-right:50px;
+		padding: 100px 100px 100px 100px;
+		margin-left: 18px;
+		border-spacing: 30px;
+		text-align: center;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		justify-content: center;
+	}
+	
+	</style>
+
+
+</head>
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
    <div class="search">
    <form action="admin_search.php" method = "POST">
@@ -28,7 +48,8 @@
    </button>   
    </form>   
    </div>
-	<table class="table" style="margin-top: 20px">
+ 
+	<table class="table" style="margin-top: 40px">
 		<tr>
 			<th>ISBN</th>
 			<th>Title</th>
@@ -54,6 +75,8 @@
 		</tr>
 		<?php } ?>
 	</table>
+
+
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
 ?>
