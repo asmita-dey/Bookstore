@@ -48,10 +48,6 @@
 	</style>
 
 </head>
-<<<<<<< HEAD
-=======
-
->>>>>>> d45ec291b74e0bd95046263329492844d9eb0d6a
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
    <div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="admin_search.php" method = "POST">

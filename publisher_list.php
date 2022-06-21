@@ -17,7 +17,28 @@
 	$title = "List Of Publishers";
 	require "./template/header3.php";
 ?>
-	<p class="lead" style="font-size: 3.3rem;">List of Publisher</p>
+
+<head>
+<link rel="stylesheet" href="bootstrap/css/style.css">
+	<style>
+		.box-pub{
+		  width: 100%;
+		  border:3px black;
+		  padding: 20px 10px 20px;
+      	  text-align: left;
+		  background-color: white;
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		}
+	</style>
+</head>
+
+<br>
+<br>
+<br>
+
+<div class="box-pub">
+	<p class="lead" style="font-size: 3.3rem;text-align: center;">LIST OF PUBLISHER</p>
+	<br>
 	<ul>
 	<?php 
 		while($row = mysqli_fetch_assoc($result)){
@@ -35,14 +56,15 @@
 			}
 	?>
 		<li>
-			<span class="badge"><?php echo $count; ?></span>
+			<span class="badge" style="align-items: center;"><?php echo $count; ?></span>
 		    <?php echo $row['publisher_name']; ?></a>
 		</li>
 	<?php } ?>
 	</ul>
 	<div class = "text-left">
-		<p class="lead"><a href="publisher_add.php">Add new Publisher</a></p>
+		<p class="lead" style="font-size: 2.7rem;"><a href="publisher_add.php">Add new Publisher</a></p>
 	</div>
+</div>
 <?php
 	mysqli_close($conn);
 ?>
