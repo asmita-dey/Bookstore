@@ -13,7 +13,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
+          <a class="navbar-brand" href="index.php"><img src="logo.png" 
           height = 35px width = 60px></a>
           <b><a class="navbar-brand" href="index.php">TechHub</a></b>
         </div>

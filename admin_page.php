@@ -42,7 +42,7 @@
 <center><h1 class="admin-txt" style="font-size:5rem;color: purple;">Hello Admin!</h1></center>
 
 
-<center><img src = "https://www.freeiconspng.com/uploads/computer-user-icon-12.png"></center>
+<center><img src = "computer-user-icon.png"></center>
 
 
 

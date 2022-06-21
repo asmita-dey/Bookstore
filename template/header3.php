@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="admin_page.php"><img src="http://cdn.onlinewebfonts.com/svg/img_323457.png" 
+          <a class="navbar-brand" href="admin_page.php"><img src="logo.png" 
           height = 35px width = 60px></a>
           <a class="navbar-brand" href="admin_page.php">TechHub</a>
         </div>

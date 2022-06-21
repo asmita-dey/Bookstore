@@ -37,9 +37,9 @@
 <br>
 
 <div class="box-pub">
-	<p class="lead" style="font-size: 3.3rem;text-align: center;">LIST OF PUBLISHER</p>
+	<p class="lead" style="font-size: 3.3rem;text-align: center;">LIST OF PUBLISHERS</p>
 	<br>
-	<ul>
+	<ul style="font-size: 1.8rem;">
 	<?php 
 		while($row = mysqli_fetch_assoc($result)){
 			$count = 0; 
@@ -56,13 +56,13 @@
 			}
 	?>
 		<li>
-			<span class="badge" style="align-items: center;"><?php echo $count; ?></span>
+			<span class="badge" style="align-items: center;font-size: 1.8rem;"><?php echo $count; ?></span>
 		    <?php echo $row['publisher_name']; ?></a>
 		</li>
 	<?php } ?>
 	</ul>
 	<div class = "text-left">
-		<p class="lead" style="font-size: 2.7rem;"><a href="publisher_add.php">Add new Publisher</a></p>
+		<p class="lead" style="font-size: 3.0rem;"><a href="publisher_add.php">Add new Publisher</a></p>
 	</div>
 </div>
 <?php

@@ -59,7 +59,7 @@
    </button>   
    </form>   
    </div>
-	<table class="table" style="margin-top: 40px">
+	<table class="table" style="margin-top: 20px">
 		<tr>
 			<td></td>
 		</tr>

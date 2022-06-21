@@ -48,10 +48,7 @@
 	</style>
 
 </head>
-<<<<<<< HEAD
 
-=======
->>>>>>> 0ce35ce42cbf09373d9d572291d941d0527f8c5e
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
    <div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="admin_search.php" method = "POST">

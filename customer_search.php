@@ -8,7 +8,7 @@
     $image = $_POST['search'];
 	$query1 = "SELECT order_items.book_isbn, order_items.quantity, orders.customerid, orders.amount, orders.date,
     orders.ship_name, orders.ship_address, orders.ship_city, orders.ship_zip_code, orders.ship_country FROM order_items INNER JOIN orders ON 
-    order_items.orderid = orders.orderid WHERE orders.ship_name LIKE '%$image%' OR orders.ship_address LIKE '%$image%' OR orders.ship_city LIKE '%$image%'
+    order_items.orderid = orders.orderid WHERE orders.ship_name LIKE '%$image%' OR orders.ship_country LIKE '%$image%' OR orders.ship_city LIKE '%$image%'
 	OR orders.customerid = '$image'";
 	$result1 = mysqli_query($conn, $query1);
 
@@ -47,6 +47,7 @@
 	
 	</style>
 	</head>
+	<br>
 	<div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="customer_search.php" method = "POST">
    <input type="text" placeholder=" Search....."  name="search"/>

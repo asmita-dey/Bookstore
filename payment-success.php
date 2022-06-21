@@ -66,7 +66,7 @@
 <body>
 <div class = "pay">
 <p><h4>Do not refresh this page</h4></p> 
-<img src = "https://freepngimg.com/thumb/green_tick/27894-7-green-tick-transparent-background-thumb.png">
+<img src = "tick.png">
 <h3 style="color: green;"><b>Payment Successfull!!</b></h3>
 <p class="lead text-success">Your order has been placed sucessfully!! Your Customer ID is <?php echo "$customerid"; ?></p>
 <table class="table" style="font-size: 1.8rem;">
