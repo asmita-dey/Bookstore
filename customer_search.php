@@ -17,10 +17,37 @@
 		exit;
 	}
 ?>
+   <head>  
    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="search.css">
-   <br>
-   <div class="search">
+   <link rel="stylesheet" href="bootstrap/css/style.css"> 
+   <style>
+	.table{
+		width: 100%;
+		border:3px black;
+		padding-right:50px;
+		padding: 100px 100px 100px 100px;
+		margin-left: 18px;
+		border-spacing: 30px;
+		text-align: center;
+		background-color: white;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		justify-content: justify;
+	}
+	tr{
+		text-align: center;
+	}
+	td{
+		text-align: center;
+	}
+	th{
+		text-align: center;
+		font-size: 1.7rem;
+	}
+	
+	</style>
+	</head>
+	<div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="customer_search.php" method = "POST">
    <input type="text" placeholder=" Search....."  name="search"/>
    <button>   
@@ -32,6 +59,9 @@
             echo '<br><p class = "lead text-warning">Result not Found!!!</div>';
             exit;}?>
 	<table class="table" style="margin-top: 20px">
+		<tr>
+			<td></td>
+		</tr>
 		<tr>
 			<th>Book ISBN</th>
             <th>Quantity</th>
@@ -58,6 +88,9 @@
             <td><?php echo $row1['ship_country']; ?></td>
         </tr>
 		<?php } ?>
+		<tr>
+		<td><td></td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
 	</table>
 <?php
 	if(isset($conn)) {mysqli_close($conn);}

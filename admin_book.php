@@ -30,20 +30,28 @@
 		margin-left: 18px;
 		border-spacing: 30px;
 		text-align: center;
-		background-color: rgb(255, 255, 255);
+		background-color: white;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		justify-content: justify;
 	}
+	tr{
+		text-align: center;
+	}
 	td{
-		text-align: left;
+		text-align: center;
 	}
 	th{
-		text-align: justify;
+		text-align: center;
+		font-size: 1.7rem;
 	}
 	
 	</style>
 
 </head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d45ec291b74e0bd95046263329492844d9eb0d6a
    <br><p class="lead"><a href="admin_add.php">Add new book</a></p>
    <div class="search" style="width: 60%;padding:20px;font-size:1.8rem">
    <form action="admin_search.php" method = "POST">

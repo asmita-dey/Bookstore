@@ -17,7 +17,7 @@
 	$title = "List Of Publishers";
 	require "./template/header3.php";
 ?>
-	<p class="lead">List of Publisher</p>
+	<p class="lead" style="font-size: 3.3rem;">List of Publisher</p>
 	<ul>
 	<?php 
 		while($row = mysqli_fetch_assoc($result)){
