@@ -100,7 +100,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 		function press(event){
 			if(!(event.keyCode>64 && event.keyCode<91)&&!(event.keyCode>96 && event.keyCode<123)&&!(event.keyCode == 32))
 			{
-				alert("Can only use letters for name.");
+				alert("Can only use letters.");
 			}
 		}
 		document.getElementById('rzp-button1').onclick = async function(e) {
