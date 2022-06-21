@@ -5,7 +5,7 @@
 	$title = "Admin Login";
     if(!preg_match("/^[a-zA-Z-']*$/",$name)){
         echo '<script>alert("Invalid username!!");
-        window.location = "admin.php";
+        window.location = "admin_login.php";
         </script>';
       }
     else{
@@ -25,7 +25,7 @@
      }
     if(!mysqli_fetch_array($result)){
         echo '<script>alert("Username or Password is incorrect!!");
-        window.location = "admin.php";
+        window.location = "admin_login.php";
         </script>';
             exit;
         }
