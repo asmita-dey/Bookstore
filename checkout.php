@@ -56,7 +56,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 		<div class="form-group">
 			<label for="name" class="control-label col-md-4">Name</label>
 			<div class="col-lg-6">
-				<input type="text" id="name" name="name" class="col-md-4" class="form-control">
+				<input type="text" id="name" name="name" class="col-md-4" class="form-control" onkeypress = "press(event)">
 			</div>
 		</div>
 		
@@ -69,7 +69,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 		<div class="form-group">
 			<label for="city" class="control-label col-md-4">City</label>
 			<div class="col-lg-6">
-				<input type="text" id="city", name="city" class="col-md-4" class="form-control">
+				<input type="text" id="city", name="city" class="col-md-4" class="form-control" onkeypress = "press(event)">
 			</div>
 		</div>
 		<div class="form-group">
@@ -81,22 +81,28 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 		<div class="form-group">
 			<label for="country" class="control-label col-md-4">Country</label>
 			<div class="col-lg-6">
-				<input type="text" id="country", name="country"  class="col-md-4" class="form-control">
+				<input type="text" id="country", name="country"  class="col-md-4" class="form-control" onkeypress = "press(event)">
 			</div>
 		</div>
 		
 		<br>
 		<br>
 		<div class="form-group">
-			<button id="rzp-button1" style="font-size: 1.7rem;margin-left:57px; padding:8px 16px;" type="button" name="submit" value="Purchase" class="button">Purchase</button></center>
+			<button id="rzp-button1" style="font-size: 1.7rem;margin-left:57px; padding:8px 16px;" type="button" name="submit" value="Purchase" class="button">Purchase</button>
 		</div>
 		
 	</form>
-	<a href="cart.php" style="font-size: 1.8rem;margin-left:40px; padding:10px 24px;" class="button1">Cancel</a></center>
+	<a href="cart.php" style="font-size: 1.8rem;margin-left:40px; padding:10px 24px;" class="button1">Cancel</a>
 	<br>
 
 	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 	<script>
+		function press(event){
+			if(!(event.keyCode>64 && event.keyCode<91)&&!(event.keyCode>96 && event.keyCode<123)&&!(event.keyCode == 32))
+			{
+				alert("Can only use letters for name.");
+			}
+		}
 		document.getElementById('rzp-button1').onclick = async function(e) {
 
 			const rawResponse = await fetch('http://localhost/bookstore/pay.php?amt=<?php echo $_SESSION['total_price'] ?>', {
