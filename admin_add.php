@@ -75,6 +75,59 @@
 		}
 	}
 ?>
+
+<head>
+  <link rel="stylesheet" href="bootstrap/css/style.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="search.css"> 
+
+
+  <style>
+	.button0{
+    background-color: rgb(73, 160, 44);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 7px 20px;
+    border-radius: 4px;
+	}
+	.button0:hover{
+    background-color: white;
+    color: black;
+
+	}
+	.box-table{
+		width: 100%;
+		border:3px black;
+		padding: 10px 10px 10px;
+		margin-left: 13px;
+		border-spacing: 30px;
+		text-align: center;
+		background-color: white;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		justify-content: justify;
+	}
+	tr{
+		text-align: center;
+	}
+	td{
+		text-align: center;
+	}
+	th{
+		text-align: center;
+		font-size: 2rem;
+	}
+	</style>
+</head>
+
+<body>
+	<br>
+	<br>
+	<div class="box-table">
+	<b><h3 class="lead" style="font-size:3rem;">ADD NEW BOOK</h3></b>
+		<br>
+		<br>
 	<form method="post" action="admin_add.php" enctype="multipart/form-data">
 		<table class="table">
 			<tr>
@@ -87,11 +140,11 @@
 			</tr>
 			<tr>
 				<th>Author</th>
-				<td><input type="text" name="author" required></td>
+				<td><input type="text"  name="author" required></td>
 			</tr>
 			<tr>
 				<th>Image</th>
-				<td><input type="file" name="image" required></td>
+				<td><center><input type="file" class="txt-img" style="margin-left:86px;" name="image" required></td></center>
 			</tr>
 			<tr>
 				<th>Description</th>
@@ -114,11 +167,15 @@
 				<td><input type="text" name="genre" required></td>
 			</tr>
 		</table>
-		<input type="submit" name="add" value="Add new book" class="btn btn-primary">
-		<input type="reset" value="Reset" class="btn btn-default">
+		<input type="submit" name="add" value="Add new book" class="button" style="padding: 10px 12px 10px;font-size:1.5rem;">
+		<input type="reset" value="Reset" class="button1" style="padding: 10px 15px 10px;font-size:1.5rem;">
 	</form>
 	<br/>
-	<a href = "admin_book.php" class="btn btn-success">Cancel</a>
+	<a href = "admin_book.php" class="button0" style="padding: 10px 14px 10px;font-size:1.6rem;">Cancel</a>
+	</div>
+</body>
+
+
 <?php
 	if(isset($conn)) {mysqli_close($conn);}
 ?>
