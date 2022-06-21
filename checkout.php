@@ -22,7 +22,7 @@ require "./template/header.php";
 if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 ?>
 <head><link rel="stylesheet" href="bootstrap/css/style.css"></head>
-	<table class="table">
+	<br><table class="table">
 		<tr>
 			<th>&nbsp;&nbsp;&nbsp;&nbsp;Item</th>
 			<th>Price</th>
@@ -88,11 +88,11 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 		<br>
 		<br>
 		<div class="form-group">
-			<center><button id="rzp-button1" style="font-size: 1.7rem;margin-left:40px; padding:8px 16px;" type="button" name="submit" value="Purchase" class="button">Purchase</button></center>
+			<button id="rzp-button1" style="font-size: 1.7rem;margin-left:57px; padding:8px 16px;" type="button" name="submit" value="Purchase" class="button">Purchase</button></center>
 		</div>
 		
 	</form>
-	<center><a href="cart.php" style="font-size: 1.8rem;margin-left:40px; padding:10px 24px;" class="button1">Cancel</a></center>
+	<a href="cart.php" style="font-size: 1.8rem;margin-left:40px; padding:10px 24px;" class="button1">Cancel</a></center>
 	<br>
 
 	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>

@@ -71,9 +71,10 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 	$_SESSION['total_items'] = total_items($_SESSION['cart']);
 ?>
 <head><link rel="stylesheet" href="bootstrap/css/style.css"></head>
-	<form action="cart.php" method="post">
+	<form action="cart.php" method="post"><br>
 		<table class="table">
 			<tr>
+				<th>&nbsp;</th>
 				<th>Item</th>
 				<th>Image</th>
 				<th>Price</th>
@@ -87,6 +88,7 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				$book = mysqli_fetch_assoc(getBookByIsbn($conn, $isbn));
 			?>
 				<tr>
+					<td>&nbsp;</td>
 					<td><?php echo $book['book_title'] . " by " . $book['book_author']; ?></td>
 					<td><img class="img-responsive img-thumbnail" src="http://localhost/bookstore/bootstrap/img/<?php echo $book['book_image']; ?>" /></td>
 					<td><?php echo "Rs" . $book['book_price']; ?></td>
@@ -96,12 +98,13 @@ if (isset($_SESSION['cart']) && (array_count_values($_SESSION['cart']))) {
 				</tr>
 			<?php } ?>
 			<tr>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
-				<th><?php echo $_SESSION['total_items']; ?></th>
-				<th>&nbsp;</th>
-				<th>&nbsp;&nbsp;<?php echo "Rs" . $_SESSION['total_price']; ?></th>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td><b><?php echo $_SESSION['total_items']; ?></b></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;&nbsp;<b><?php echo "Rs" . $_SESSION['total_price']; ?></b></td>
 			</tr>
 		</table>
 	</form>
