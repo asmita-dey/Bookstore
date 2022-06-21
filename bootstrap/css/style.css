@@ -28,6 +28,7 @@
     border-radius: 4px;
     
 }
+
 .button:hover{
     background-color: white;
     color: black;
@@ -40,6 +41,7 @@
     background-color: white;
     color: black;
 }
+
 .home{
     min-height: 60vh;
     background-image: url('headbook.jpg') ;
