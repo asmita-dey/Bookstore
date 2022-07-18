@@ -75,7 +75,7 @@ $conn = db_connect();
     }
        else
    {
-     echo '<p class="empty"> No Reviews </p>';
+     echo '<h2 align="center" class="empty"> No Reviews </h2>';
    }
   ?>
 </div>

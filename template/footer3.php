@@ -36,9 +36,8 @@
           <div class="column">
 				<h3><b>TECHHUB</b></h3>
 				<p>
-					<a href="index.php" class="link-1">Home</a>|
-					<a href="about.php">About</a>|
-					<a href="#">Faq</a>|
+					<a href="index.php" class="link-1">Home </a>|
+					<a href="about.php">About </a>|
 					<a href="contact.php">Contact</a>
                 </p>
 				<p>TechHub © 2022</p>
