@@ -44,95 +44,48 @@ $conn = db_connect();
 <br>
 
 <center><h1 class="title" style="font-size: 5rem"><b>CLIENT'S REVIEWS<b></h1></center>
+<br>
+<br>
+
 <section class="reviews">
-    
-    <br>
-    <br>
-    <br>
 
-    <div class="box-container">
-        <div class="box">
+<div class="box-container">
 
-            <img src="pic1.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-          
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>John Deo</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic2.jpg" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            </div>
-            <h3>Dustin Williams</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic2.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>Sandra Swanson</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic4.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>Tyler Martin</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic5.jpg" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            </div>
-            <h3>Natasha Walsh</h3>
-        </div>
-    </div>
+  <?php
+    $select_products=mysqli_query($conn,"SELECT * FROM `feedback` LIMIT 5") or die('query failed');
+    if(mysqli_num_rows($select_products)>0)
+    {
+      while($fetch_products=mysqli_fetch_assoc($select_products))
+      {    
+ ?>
+          <div class="box">
+            <form  method="post" >
+              
+              <div class="feedback"><p><b><?php echo $fetch_products['feedback']; ?></p></b></div> 
+               
+              <div class="name"><h3><?php echo $fetch_products['name']; ?></h3></div>
+              
+              <input type="hidden" name="feedback" value="<?php echo $fetch_products['feedback'];?>">
+              <input type="hidden" name="name" value="<?php echo $fetch_products['name']; ?>">
+              
+            </form>
+          </div>
+  <?php
+      }
+    }
+       else
+   {
+     echo '<p class="empty"> No Reviews </p>';
+   }
+  ?>
+</div>
+<br>
+<br>
 </section>
+
+
+
+
 
 <br>
 <br>
