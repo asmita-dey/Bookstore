@@ -9,6 +9,7 @@ $conn = db_connect();
 <title>about us</title>
 <head><link rel="stylesheet" href="bootstrap/css/style.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                      
+<script src="https://kit.fontawesome.com/de0466861c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <section class="choose">
@@ -52,7 +53,7 @@ $conn = db_connect();
 <div class="box-container">
 
   <?php
-    $select_products=mysqli_query($conn,"SELECT * FROM `feedback` LIMIT 5") or die('query failed');
+    $select_products=mysqli_query($conn,"SELECT * FROM `feedback` , `customers` WHERE feedback.name=customers.name LIMIT 5") or die('query failed');
     if(mysqli_num_rows($select_products)>0)
     {
       while($fetch_products=mysqli_fetch_assoc($select_products))
@@ -62,11 +63,13 @@ $conn = db_connect();
             <form  method="post" >
               
               <div class="feedback"><p><b><?php echo $fetch_products['feedback']; ?></p></b></div> 
-               
               <div class="name"><h3><?php echo $fetch_products['name']; ?></h3></div>
+              <br>
+              <i class="fa-solid fa-map-pin"><div class="city"><p><?php echo $fetch_products['city'] ," , ", $fetch_products['country']; ?></p></div></i>
               
               <input type="hidden" name="feedback" value="<?php echo $fetch_products['feedback'];?>">
               <input type="hidden" name="name" value="<?php echo $fetch_products['name']; ?>">
+              <input type="hidden" name="city" value=" <?php echo $fetch_products['city'] , $fetch_products['country']; ?>">
               
             </form>
           </div>
