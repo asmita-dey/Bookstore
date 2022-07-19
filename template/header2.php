@@ -22,7 +22,8 @@
           <ul class="nav navbar-nav navbar-right">
           <li><a href="book_fetch.php"><span class="glyphicon glyphicon-book"></span>&nbsp; Books</a></li>    
           <li><a href="user_login.php"><span class="glyphicon glyphicon-user"></span>&nbsp; Login</a></li>   
-          </ul>
+          <li><a href="cart.php"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp; My Cart</a></li>  
+        </ul>
         </div>
       </div>     
     </nav>

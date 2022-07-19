@@ -9,6 +9,7 @@ $conn = db_connect();
 <title>about us</title>
 <head><link rel="stylesheet" href="bootstrap/css/style.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>                      
+<script src="https://kit.fontawesome.com/de0466861c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <section class="choose">
@@ -44,95 +45,50 @@ $conn = db_connect();
 <br>
 
 <center><h1 class="title" style="font-size: 5rem"><b>CLIENT'S REVIEWS<b></h1></center>
+<br>
+<br>
+
 <section class="reviews">
-    
-    <br>
-    <br>
-    <br>
 
-    <div class="box-container">
-        <div class="box">
+<div class="box-container">
 
-            <img src="pic1.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-          
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>John Deo</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic2.jpg" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            </div>
-            <h3>Dustin Williams</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic2.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>Sandra Swanson</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic4.webp" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-            </div>
-            <h3>Tyler Martin</h3>
-        </div>
-    
-        <div class="box">
-
-            <img src="pic5.jpg" alt="">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-           Consectetur delectus exercitationem sit nulla, officia ipsum totam maxime,
-           iusto nesciunt laboriosam vero error porro aliquid? Nemo alias molestiae quos minus incidunt!</p>
-           <div class="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-empty"></i>
-            </div>
-            <h3>Natasha Walsh</h3>
-        </div>
-    </div>
+  <?php
+    $select_products=mysqli_query($conn,"SELECT * FROM `feedback` , `customers` WHERE feedback.name=customers.name LIMIT 5") or die('query failed');
+    if(mysqli_num_rows($select_products)>0)
+    {
+      while($fetch_products=mysqli_fetch_assoc($select_products))
+      {    
+ ?>
+          <div class="box">
+            <form  method="post" >
+              
+              <div class="feedback"><p><b><?php echo $fetch_products['feedback']; ?></p></b></div> 
+              <div class="name"><h3><?php echo $fetch_products['name']; ?></h3></div>
+              <br>
+              <i class="fa-solid fa-map-pin"><div class="city"><p><?php echo $fetch_products['city'] ," , ", $fetch_products['country']; ?></p></div></i>
+              
+              <input type="hidden" name="feedback" value="<?php echo $fetch_products['feedback'];?>">
+              <input type="hidden" name="name" value="<?php echo $fetch_products['name']; ?>">
+              <input type="hidden" name="city" value=" <?php echo $fetch_products['city'] , $fetch_products['country']; ?>">
+              
+            </form>
+          </div>
+  <?php
+      }
+    }
+       else
+   {
+     echo '<h2 align="center" class="empty"> No Reviews </h2>';
+   }
+  ?>
+</div>
+<br>
+<br>
 </section>
+
+
+
+
 
 <br>
 <br>

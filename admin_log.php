@@ -13,7 +13,7 @@
 	$conn = db_connect();
 	
 	$query = "SELECT name, pass FROM admin WHERE name = '$name' AND pass = '$pswd'";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn,$query);
     if(!$result){
         echo "Can't retrieve data " . mysqli_error($conn);
         exit;
