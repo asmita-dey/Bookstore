@@ -92,13 +92,7 @@
                 <a href="book.php?bookisbn=<?php echo $query_row['book_isbn'];?>" class="button">Get Details</a>   
               </form>
         </div>
-
         <?php
-          $count++;
-          if($count >= 4){
-              $count = 0;
-              break;
-            }
           } ?> 
       </div>
       <br>

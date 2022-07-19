@@ -29,7 +29,7 @@
       <br>
       We deliver handpicked book to your door
     </p>
-    <a href="about.php" class="button">Discover More</a>
+    <a href="about.php" class="button">Discover More...</a>
   </div>
 </section>
 <br>
@@ -45,7 +45,7 @@
   <div class="box-container">
 
     <?php
-      $select_products=mysqli_query($conn,"SELECT * FROM `books` LIMIT 8") or die('query failed');
+      $select_products=mysqli_query($conn,"SELECT * FROM `books` LIMIT 9") or die('query failed');
       if(mysqli_num_rows($select_products)>0)
       {
         while($fetch_products=mysqli_fetch_assoc($select_products))
@@ -79,7 +79,7 @@
   </div>
   <br>
   <br>
-  <center><a href="book_fetch.php" class="button1">Load More</a></center>
+  <center><a href="book_fetch.php" class="button1">Load More...</a></center>
 </section>
 <br>
 <br>
@@ -145,7 +145,7 @@
       Deleniti ratione dicta reprehenderit laborum fugit, qui a nesciunt explicabo alias expedita.</b></i>
     </p>
    
-    <center><a href="about.php" class="button1">Read More</a></center>
+    <center><a href="about.php" class="button1">Read More...</a></center>
 
     </div>
   </div>

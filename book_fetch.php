@@ -24,9 +24,8 @@
       }
       .column1{
           float: left;
-          width: 37%;
+          width: 40%;
           padding:10px;
-          
       }
       .search{
     font-size: 18px;
@@ -37,7 +36,7 @@
     }
       .column2{
           float: left;
-          width: 22%;
+          width: 21%;
           padding:10px;
       }
       .column3{
@@ -52,6 +51,7 @@
            content:"";
            display:table;
            clear:both;
+           justify-content: center;
       }
    </style>
  </head>
@@ -63,16 +63,16 @@
  <br>
 
  <div class = "row1">
-   <div class = "column1">
-     <div class="search">
-       <form action="book_search.php" method = "POST">
+ <div class = "search">
+       <div class = "column1">
+       <form action="book_search.php" method = "POST" align = "center">
          <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
-           <button>   
+          <button>   
            <i class="fa fa-search"  style="font-size: 18px;"> </i>
            </button>   
        </form>   
      </div>
-   </div>
+    </div>
 
    <div class = "column2">
       <form action="book_filter.php" method="POST">

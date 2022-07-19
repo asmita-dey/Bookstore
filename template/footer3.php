@@ -38,7 +38,6 @@
 				<p>
 					<a href="index.php" class="link-1">Home</a>|
 					<a href="about.php">About</a>|
-					<a href="#">Faq</a>|
 					<a href="contact.php">Contact</a>
                 </p>
 				<p>TechHub © 2022</p>
@@ -62,11 +61,11 @@
 				<br><p><b>GET IN TOUCH</b></p>
                 <div>
 					<i class="fa fa-map-marker"></i><span>
-					444 S. Cedros Ave,Solana Beach, California</span>
+					6,Wood St,Kankaria Estates,Kolkata,India</span>
 				</div>
 				<div>
 					<i class="fa fa-phone"></i>
-					+1.555.555.5555
+					+91 7843752901
 				</div>
 				<div>
 					<i class="fa fa-envelope"></i>
@@ -80,10 +79,10 @@
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. 
 				</p>
 				<div>
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
+					<a href="https://m.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://in.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="https://github.com" target="_blank"><i class="fa fa-github"></i></a>
 				</div>
 			</div>
          </div>
