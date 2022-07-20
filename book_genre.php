@@ -37,13 +37,6 @@
            width: 50%;
            padding:0px;
        }
-       .search{
-    font-size: 18px;
-    
-    } 
-    .search .search-txt{
-      border-radius: 5px;
-    }
        .row1:after{
             content:"";
             display:table;
@@ -54,18 +47,8 @@
   </head>
   <body>
   <br>
-  <center><div class="search">
-      <form action="book_search.php" method = "POST">
-        <input class="search-txt" type="text" placeholder=" Search....."  name="search"/>
-          <button>   
-          <i class="fa fa-search"  style="font-size: 18px;"> </i>
-          </button>   
-      </form>   
-    </div></center>
-  </div>
-
+  <br> 
   <br>
- <br> 
  
  <section class="products">
 
