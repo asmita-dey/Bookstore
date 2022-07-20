@@ -12,7 +12,7 @@ session_start();
 			  	<fieldset>
 				    <legend><b>Contact Us!</b></legend>
 					
-				    <p class="lead">We'd love to hear from you! Please send us your feedbacks.</p>
+				    <p class="lead">We'd love to hear from you! Please send us your feedbacks/queries.</p>
 					<br>
 				    <div class="form-group">
 				      	<label for="inputName" class="col-lg-2 control-label">Name:</label>
@@ -27,7 +27,7 @@ session_start();
 				      	</div>
 				    </div>
 				    <div class="form-group">
-				      	<label for="textArea" class="col-lg-2 control-label">Feedback:</label>
+				      	<label for="textArea" class="col-lg-2 control-label">Feedback/Query:</label>
 				      	<div class="col-lg-10">
 				        	<textarea class="form-control" rows="3" id="textArea" placeholder="Feedback" name="feedback"></textarea>
 				      	</div>

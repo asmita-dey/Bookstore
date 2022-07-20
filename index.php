@@ -141,8 +141,8 @@
     </div>
     <div class="content">
       <h2><b>ABOUT US</b></h2>
-      <p><b><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Deleniti ratione dicta reprehenderit laborum fugit, qui a nesciunt explicabo alias expedita.</b></i>
+      <p><b><i>TechHub deliver handpicked books to your door. We provide a wide range of CS books of varied genres that is
+        from Web Development to coding, from Hardware to Machine Learning etc....</b></i>
     </p>
    
     <center><a href="about.php" class="button1">Read More...</a></center>

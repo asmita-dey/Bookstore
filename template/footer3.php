@@ -36,13 +36,8 @@
           <div class="column">
 				<h3><b>TECHHUB</b></h3>
 				<p>
-<<<<<<< HEAD
-					<a href="index.php" class="link-1">Home</a>|
-					<a href="about.php">About</a>|
-=======
 					<a href="index.php" class="link-1">Home </a>|
 					<a href="about.php">About </a>|
->>>>>>> 001b892882858706ed3a1f1837e83a844b8b7ebe
 					<a href="contact.php">Contact</a>
                 </p>
 				<p>TechHub © 2022</p>

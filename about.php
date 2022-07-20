@@ -32,8 +32,9 @@ $conn = db_connect();
     </div>
     <div class="content-box">
       <h2><b>WHY CHOOSE US?</b></h2>
-      <p><b><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum quidem obcaecati! 
-        Illo eos totam impedit soluta dolor tempora officiis nemo fugit nisi sapiente architecto, reprehenderit voluptas, nulla repellendus praesentium?</b></i><p>
+      <p><b><i>TechHub deliver handpicked books to your door. We provide a wide range of CS books of varied genres that is
+        from Web Development to coding, from Hardware to Machine Learning etc. We took 2-3 days delivery span without charging any extra cost. 
+        Also one can check books even without creating an account. TechHub helps you collect latest books of reputed publishers....</b></i><p>
       <p><b><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       Deleniti ratione dicta reprehenderit laborum fugit, qui a nesciunt explicabo alias expedita.</b></i>
      </p>
@@ -78,7 +79,7 @@ $conn = db_connect();
     }
        else
    {
-     echo '<h2 align="center" class="empty"> No Reviews </h2>';
+     echo '<h2 align="center" class="empty"> No Reviews! </h2>';
    }
   ?>
 </div>
