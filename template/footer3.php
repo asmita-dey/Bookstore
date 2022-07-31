@@ -76,7 +76,7 @@
             <div class="column">
 				<br><p>
 					<b>TO KNOW MORE.....</b><br>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. 
+					One stop destination for all CS books... 
 				</p>
 				<div>
 					<a href="https://m.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>

@@ -35,8 +35,8 @@ $conn = db_connect();
       <p><b><i>TechHub deliver handpicked books to your door. We provide a wide range of CS books of varied genres that is
         from Web Development to coding, from Hardware to Machine Learning etc. We took 2-3 days delivery span without charging any extra cost. 
         Also one can check books even without creating an account. TechHub helps you collect latest books of reputed publishers....</b></i><p>
-      <p><b><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Deleniti ratione dicta reprehenderit laborum fugit, qui a nesciunt explicabo alias expedita.</b></i>
+      <p><b><i>We even provide service to international customers and aim to deliver the books as soon as possible to them.
+      We would like people from around the world to shop from us.</b></i>
      </p>
     </div>
   </div>
@@ -98,8 +98,8 @@ $conn = db_connect();
     <br>
     
       <h3>HAVE ANY QUESTIONS?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Corrupti consectetur quisquam sapiente aliquid error sequi commodi culpa, voluptas voluptatem nam!
+        <p>In case of any inconvenience or difficulties please feel free to contact us by clicking on the button below.
+          <br>We are here to help/guide you!
         </p>
         <br>
         

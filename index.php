@@ -29,7 +29,7 @@
       <br>
       We deliver handpicked book to your door
     </p>
-    <a href="about.php" class="button">Discover More...</a>
+    <a href="about.php" class="button">Discover More</a>
   </div>
 </section>
 <br>
@@ -95,7 +95,7 @@
     <?php
       $select_products=mysqli_query($conn,"SELECT books.book_isbn, books.book_title,
       books.book_author,books.book_price, books.book_image, category.category FROM `books` JOIN `category` 
-      WHERE books.book_isbn = category.book_isbn AND category.category NOT LIKE 'None' LIMIT 9") or die('query failed');
+      WHERE books.book_isbn = category.book_isbn AND category.category NOT LIKE 'None' LIMIT 8") or die('query failed');
       if(mysqli_num_rows($select_products)>0)
       {
         while($fetch_products=mysqli_fetch_assoc($select_products))
@@ -145,7 +145,7 @@
         from Web Development to coding, from Hardware to Machine Learning etc....</b></i>
     </p>
    
-    <center><a href="about.php" class="button1">Read More...</a></center>
+    <center><a href="about.php" class="button1">Read More</a></center>
 
     </div>
   </div>
@@ -158,8 +158,8 @@
     <br>
     
       <h3>HAVE ANY QUESTIONS?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Corrupti consectetur quisquam sapiente aliquid error sequi commodi culpa, voluptas voluptatem nam!
+      <p>In case of any inconvenience or difficulties please feel free to contact us by clicking on the button below.
+          <br>We are here to help/guide you!
         </p>
         <br>
         

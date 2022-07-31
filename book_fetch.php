@@ -42,7 +42,7 @@
       .column3{
           float: left;
           width: 5%;
-          padding:12px;
+          padding:13px;
       }
       .column3 btn{
         
